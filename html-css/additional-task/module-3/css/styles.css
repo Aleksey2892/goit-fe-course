@@ -1,3 +1,19 @@
-body  {
-    font-family: 'Playfair Display', serif, Arial, sans-serif
+body {
+  font-family: "Playfair Display", serif, Arial, sans-serif;
+}
+ul.menu-list-item > li:hover {
+  color: darkblue;
+  background-color: rosybrown;
+  text-decoration: underline;
+}
+ul.menu-list-item {
+  text-align: center;
+}
+ul > li.menu-list {
+  box-sizing: border-box;
+  background-color: silver;
+  display: inline-block;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: bold;
 }
