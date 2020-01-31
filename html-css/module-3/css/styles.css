@@ -1,0 +1,17 @@
+li.nav-list {
+  list-style-type: none;
+  display: inline-block;
+  text-transform: uppercase;
+  
+}
+.nav-list a {
+  text-decoration: none;
+  color: #626262;
+}
+  .nav-list a:hover {
+      color: #03a9f4;
+  
+}
+ul.navigation {
+    text-align: center;
+}
