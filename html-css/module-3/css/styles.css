@@ -13,11 +13,14 @@ body {
 p.ubuntu-light {
     font-family: 'Ubuntu', sans-serif;
     text-transform: uppercase;
+    margin: 29px 0px 25px 0px;
     color: #b4ad9e;
 }
 h2 {
     font-size: 30px;
     color: #626262;
+    font-weight: normal;
+    margin-bottom: 34px;
 }
 h2+p {
     font-size: 14px;
@@ -44,34 +47,45 @@ li.nav-list:not(:last-child) {
   text-decoration: none;
   color: #626262;
 }
-.nav-list a:hover {
+.nav-list a:hover, .nav-list a:focus {
   color: #03a9f4;
 }
 ul.navigation {
   text-align: center;
   vertical-align: middle;
-  margin: 0;
+  margin: 72px 0px 99px 0px;
   padding: 0;
 }
 
 .container {
     width: 900px;
-    background-color: lightcoral;
+    
     margin: 0 auto;
+    
+}
+section.main-content:nth-child(n2) {
+    margin: 0px;
+    
 }
 article.some-content-1 {
     display: inline-block;
     width: 420px;
+    margin-right: 56px;
+    margin-bottom: 130px;
+    
     
 }
 article.some-content-2 {
     display: inline-block;
     width: 420px;
+
+    
      
 }
 article.some-content-3 {
     display: inline-block;
     width: 420px;
+    margin-right: 56px;
 }
 article.some-content-4 {
     display: inline-block;
@@ -80,8 +94,20 @@ article.some-content-4 {
 article.some-content-5 {
     display: inline-block;
     width: 420px;
+    margin-right: 56px;
 }
 article.some-content-6 {
     display: inline-block;
     width: 420px;
+}
+button {
+    display: inline-block;
+    margin: 50px;
+    background: transparent;
+    padding: 20px 32px 20px;
+    color: #626262;
+    margin-top: 55px;
+    
+}
+div {text-align: center;
 }
