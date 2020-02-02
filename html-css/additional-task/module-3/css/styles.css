@@ -1,19 +1,48 @@
+html {
+  box-sizing: border-box;
+}
 body {
   font-family: "Playfair Display", serif, Arial, sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
-ul.menu-list-item > li:hover {
-  color: darkblue;
+ul.menu-list-item > li:hover,
+li:focus {
   background-color: rosybrown;
-  text-decoration: underline;
 }
 ul.menu-list-item {
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 ul > li.menu-list {
-  box-sizing: border-box;
+  padding: 20px 60px;
+  border: 1px solid;
+  margin-top: 10px;
   background-color: silver;
   display: inline-block;
   list-style-type: none;
   text-transform: uppercase;
   font-weight: bold;
+}
+li > a {
+  text-decoration: none;
+  color: black;
+}
+section.main {
+  margin: 0 auto;
+  padding: 0;
+  width: 470px;
+  background-color: cadetblue;
+}
+p.ubuntu {
+  text-transform: uppercase;
+  font-family: "ubuntu", sans-serif;
+  padding-left: 25px;
+}
+section.post-1 > img {
+  padding: 25px 25px 0;
+}
+.post-1>h2, p {
+  padding-left: 25px;
+  padding-right: 25px;
 }
