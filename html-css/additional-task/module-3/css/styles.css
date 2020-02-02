@@ -29,20 +29,47 @@ li > a {
   color: black;
 }
 section.main {
-  margin: 0 auto;
+  margin: 0 auto 40px;
   padding: 0;
   width: 470px;
-  background-color: cadetblue;
 }
-p.ubuntu {
+section.post-1 > .ubuntu {
   text-transform: uppercase;
   font-family: "ubuntu", sans-serif;
   padding-left: 25px;
 }
+section.post-1 {
+  padding: 0 0 15px;
+}
 section.post-1 > img {
   padding: 25px 25px 0;
 }
-.post-1>h2, p {
+.post-1 {
   padding-left: 25px;
   padding-right: 25px;
+}
+
+section.main-2 {
+  margin: 0 auto;
+  padding: 0;
+  width: 960px;
+}
+section.post-2 {
+  display: inline-block;
+  width: 420px;
+  padding: 25px 0 25px 30px;
+  margin-right: 45px;
+}
+section.post-2:last-child {
+  margin: 0;
+  padding-left: 0;
+}
+
+.post-2 {
+  padding-left: 0;
+  padding-right: 0;
+}
+section.post-2 > .ubuntu {
+  text-transform: uppercase;
+  font-family: "ubuntu", sans-serif;
 }
