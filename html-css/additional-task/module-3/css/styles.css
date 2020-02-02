@@ -73,3 +73,9 @@ section.post-2 > .ubuntu {
   text-transform: uppercase;
   font-family: "ubuntu", sans-serif;
 }
+section.main-3 {
+  width: 400px;
+  margin: 0 auto 20px;
+  text-align: center;
+  border: 1px solid;
+}
