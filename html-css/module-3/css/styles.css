@@ -16,6 +16,15 @@ p.ubuntu-light {
   margin: 29px 0px 25px 0px;
   color: #b4ad9e;
 }
+.container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 0;
+}
+.container p {
+  font-size: 14px;
+}
 h2 {
   font-size: 30px;
   color: #626262;
@@ -54,55 +63,30 @@ li.nav-list:not(:last-child) {
 ul.navigation {
   text-align: center;
   vertical-align: middle;
-  margin: 72px 0px 99px 0px;
-  padding: 0;
+  margin: 0;
+  padding: 72px 0px 99px 0px;
 }
 
-.container {
-  width: 900px;
+article.some-content {
+  display: inline-block;
+  width: 420px;
+  margin-right: 60px;
+  margin-bottom: 130px;
+}
+article.some-content:nth-child(2n) {
+  margin-right: 0;
+}
+article.some-content:nth-last-child(-n + 2) {
+  margin-bottom: 0;
+}
 
-  margin: 0 auto;
-}
-section.main-content:nth-child(n2) {
-  margin: 0px;
-}
-article.some-content-1 {
-  display: inline-block;
-  width: 420px;
-  margin-right: 56px;
-  margin-bottom: 130px;
-}
-article.some-content-2 {
-  display: inline-block;
-  width: 420px;
-}
-article.some-content-3 {
-  display: inline-block;
-  width: 420px;
-  margin-right: 56px;
-  margin-bottom: 130px;
-}
-article.some-content-4 {
-  display: inline-block;
-  width: 420px;
-  margin-bottom: 130px;
-}
-article.some-content-5 {
-  display: inline-block;
-  width: 420px;
-  margin-right: 56px;
-}
-article.some-content-6 {
-  display: inline-block;
-  width: 420px;
-}
 button {
   display: inline-block;
-  margin: 50px;
+  margin: 52px 50px 70px;
   background: transparent;
   padding: 20px 32px 20px;
   color: #626262;
-  margin-top: 55px;
+
   font-size: 20px;
   line-height: 24px;
   border: 1px solid;
