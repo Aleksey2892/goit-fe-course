@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>homework-04</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,900&display=swap"
+      rel="stylesheet"/>
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -13,60 +15,110 @@
       <h1><a href="#">Mart</a></h1>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Page</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li class="nav"><a href="#">Home</a></li>
+          <li class="nav"><a href="#">About Us</a></li>
+          <li class="nav"><a href="#">Page</a></li>
+          <li class="nav"><a href="#">Shop</a></li>
+          <li class="nav"><a href="#">Blog</a></li>
+          <li class="nav"><a href="#">Contact Us</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h2>Featured Products</h2>
-      <ul>
-        <li><img src="./img/price/homework-01.png" alt="Blue Tshirt"><h3>Blue Tshirt</h3></li>
-        <li><img src="./img/price/homework-02.png" alt="Woman Shirt"><h3>Woman Shirt</h3></li>
-        <li><img src="./img/price/homework-03.png" alt="Yellow Tshirt"><h3>Yellow Tshirt</h3></li>
-        <li><img src="./img/price/homework-04.png" alt="Cool Lingerie"><h3>Cool Lingerie</h3></li>
-        <li><img src="./img/price/homework-05.png" alt="Blue Tshirt"><h3>Blue Tshirt</h3></li>
-        <li><img src="./img/price/homework-06.png" alt="Woman Shirt"><h3>Woman Shirt</h3></li>
-        <li><img src="./img/price/homework-07.png" alt="Yellow Tshirt"><h3>Yellow Tshirt</h3></li>
-        <li><img src="./img/price/homework-08.png" alt="Cool Lingerie"><h3>Cool Lingerie</h3></li>
-      </ul>
-      <h2>Latest News</h2>
+      <section class="products">
+        <h2>Featured Products</h2>
       <ul>
         <li>
-          <h3>
-            Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-          </h3>
-          <p>
-            Nam nec tellus a odio tincidunt auc. Duis sed odio sit amet nibh
-            vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam
-            nec tellus a odio tincidunt auctor a ornare
-          </p>
+          <a href="#">
+            <img src="./img/price/homework-01.png" alt="Blue Tshirt" />
+          <h3 class="product-name">Blue Tshirt <span>$26</span></h3>
+        </a>
         </li>
         <li>
-          <h3>
-            Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-          </h3>
-          <p>
-            Nam nec tellus a odio tincidunt auc. Duis sed odio sit amet nibh
-            vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam
-            nec tellus a odio tincidunt auctor a ornare
-          </p>
+          <a href="#">
+          <img src="./img/price/homework-02.png" alt="Woman Shirt" />
+          <h3 class="product-name">Woman Shirt <span>$31</span></h3>
+        </a>
         </li>
         <li>
-          <h3>
-            Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-          </h3>
-          <p>
-            Nam nec tellus a odio tincidunt auc. Duis sed odio sit amet nibh
-            vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam
-            nec tellus a odio tincidunt auctor a ornare
-          </p>
+          <a href="#">
+          <img src="./img/price/homework-03.png" alt="Yellow Tshirt" />
+          <h3 class="product-name">Yellow Tshirt <span>$21</span></h3>
+        </a>
+        </li>
+        <li>
+          <a href="#">
+          <img src="./img/price/homework-04.png" alt="Cool Lingerie" />
+          <h3 class="product-name">Cool Lingerie <span>$56</span></h3>
+        </a>
+        </li>
+        <li>
+          <a href="#">
+          <img src="./img/price/homework-05.png" alt="Blue Tshirt" />
+          <h3 class="product-name">Blue Tshirt <span>$26</span></h3>
+        </a>
+        </li>
+        <li>
+          <a href="#">
+          <img src="./img/price/homework-06.png" alt="Woman Shirt" />
+          <h3 class="product-name">Woman Shirt <span>$31</span></h3>
+        </a>
+        </li>
+        <li>
+          <a href="#">
+          <img src="./img/price/homework-07.png" alt="Yellow Tshirt" />
+          <h3 class="product-name">Yellow Tshirt <span>$21</span></h3>
+        </a>
+        </li>
+        <li>
+          <a href="#">
+          <img src="./img/price/homework-08.png" alt="Cool Lingerie" />
+          <h3 class="product-name">Cool Lingerie <span>$56</span></h3>
+        </a>
         </li>
       </ul>
+    </section>
+      <section class="news">
+        <h2>Latest News</h2>
+      <ul>
+        <li>
+          <img src="./img/latest-news/homework-04_ipad.jpg" alt="ipad" />
+          <h3>
+            Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+          </h3>
+          <p>
+            Nam nec tellus a odio tincidunt auc. Duis sed odio sit amet nibh
+            vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam
+            nec tellus a odio tincidunt auctor a ornare
+          </p>
+          <a href="#">Read More</a>
+        </li>
+        <li>
+          <img src="./img/latest-news/homework-04_people.jpg" alt="girls" />
+          <h3>
+            Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+          </h3>
+          <p>
+            Nam nec tellus a odio tincidunt auc. Duis sed odio sit amet nibh
+            vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam
+            nec tellus a odio tincidunt auctor a ornare
+          </p>
+          <a href="#">Read More</a>
+        </li>
+        <li>
+          <img src="./img/latest-news/homework-04_bus.jpg" alt="bus" />
+          <h3>
+            Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+          </h3>
+          <p>
+            Nam nec tellus a odio tincidunt auc. Duis sed odio sit amet nibh
+            vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam
+            nec tellus a odio tincidunt auctor a ornare
+          </p>
+          <a href="#">Read More</a>
+        </li>
+      </ul>
+    </section>
     </main>
   </body>
 </html>
