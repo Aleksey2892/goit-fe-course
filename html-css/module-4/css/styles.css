@@ -11,7 +11,8 @@ font-family: 'Open Sans', sans-serif;*/
 .container-header {
   width: 1170px;
   margin: 0 auto;
-  padding: 0 30px 0;
+  padding: 36px 30px 109px;
+  line-height: 32px;
 }
  a {
     text-decoration: none;
@@ -36,10 +37,6 @@ h1::first-letter {
 h1.logo {
   float: left;
   margin: 0;
-}
-nav {
-  padding: 36px 0 109px;
-  line-height: 32px;
 }
 ul.nav {
   float: right;
@@ -84,7 +81,7 @@ h2::after {
   background-color: #1abc9c;
   margin: 34px auto 0;
 }
-h3.product-name {
+div.product-name {
   background-color: #323232;
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
@@ -94,20 +91,21 @@ h3.product-name {
   font-weight: 900;
   letter-spacing: -0.02em;
 }
-h3.product-name a{
+div.product-name a{
   color: #ffffff;
   padding-left: 14px;
 }
-li.list-item:hover h3.product-name {
+li.list-item:hover div.product-name {
   background-color: #1abc9c;
 }
 span.item-price {
   background-color: rgba(255, 255, 255, 0.44);
   float: right;
   padding: 0 12px 0;
+  display: block;
 
 }
-.latest-news h3 {
+.latest-news div {
   color: #555252;
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
@@ -134,7 +132,7 @@ span.item-price {
   padding: 15px 47px 15px;
   margin: 12px 0 45px;
   border-radius: 5%;
-  float: left;
+  display: inline-block;
   cursor: pointer;
 }
 
