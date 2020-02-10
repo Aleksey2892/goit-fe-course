@@ -171,8 +171,14 @@ li.list-item:nth-last-child(-n+4) {
   padding: 105px 0 80px;
 }
 .container-news h3 {
+  font-family: 'Open Sans', sans-serif;
   padding-top: 10px;
   padding-bottom: 23px;
+  color: #555252;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.02em;
 }
 .container-news h3::after {
   content: "";
