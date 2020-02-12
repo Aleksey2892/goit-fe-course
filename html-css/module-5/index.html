@@ -2,31 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>homework-05</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap"
+      rel="stylesheet" />
   </head>
 
   <body>
-
     <header>
-        <div class="header-menu">
-      <h1><a href="#">Mart</a></h1>
-      <nav class="clearfix">
-          <ul>
-          <li class="list-nav"><a href="#">Home</a></li>
-          <li class="list-nav"><a href="#">About Us</a></li>
-          <li class="list-nav"><a href="#">Page</a></li>
-          <li class="list-nav"><a href="#">Shop</a></li>
-          <li class="list-nav"><a href="#">Blog</a></li>
-          <li class="list-nav"><a href="#">Contact Us</a></li>
-      </ul>
-    </nav>
-    </div>
-    </header>
+        <div class="header__container">
+            <div class="logo-nav__container">
+          <h1><a href="#">Mart</a></h1>
+          <nav class="menu clearfix">
+            <ul>
+              <li class="menu__link"><a href="#">Home</a></li>
+              <li class="menu__link"><a href="#">About Us</a></li>
+              <li class="menu__link"><a href="#">Page</a></li>
+              <li class="menu__link"><a href="#">Shop</a></li>
+              <li class="menu__link"><a href="#">Blog</a></li>
+              <li class="menu__link"><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+        </div>
+      </header>
 
+      <main>
+          <section class="title">
+          <div class="slider">
+              <img src="/img/slider/Background.jpg" alt="Paris Tours" width="1920" height="700">            
+                  <div class="slider__block clearfix">
+                  <button class="slider__btn_left" type="button"><img src="./img/slider/left.png" alt="slider-left"></button>
+                  <button class="slider__btn_right" type="button"><img src="./img/slider/right.png" alt="slider-right"></button>
+                </div>
+        </div>
+    </section>
+      </main>
   </body>
 </html>
