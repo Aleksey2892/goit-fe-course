@@ -201,26 +201,31 @@ margin-right: 30px;
     display: block;
 }
 .price-content {
+  position: relative;
   width: 255px;
-  padding-left: 14px;
+  height: 40px;
   font-family: 'Roboto', sans-serif;
   background-color: #323232;
-  color: #ffffff;
   text-transform: uppercase;
   font-size: 18px;
   line-height: 40px;
   font-weight: 900;
   letter-spacing: -0.02em;
 }
-.price-content span {
-  float: right;
-  background-color: rgba(255, 255, 255, 0.44);
-  width: 54px;
-  text-align: center;
+.price-content h3 {
+  position: absolute;
+  left: 17px;
 }
 .price-content a {
   text-decoration: none;
   color: #ffffff;
+}
+.price-content span {
+  position: absolute;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.44);
+  width: 54px;
+  text-align: center;
 }
 .item-content:hover .price-content {
   background-color: #1abc9c;
