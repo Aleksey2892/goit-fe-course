@@ -170,7 +170,7 @@ h1::first-letter {
     width: 1170px;
     margin: 0 auto;
 }
-.content__new-collection h2 {
+.content__new-collection>h2 {
     font-family: 'Roboto', sans-serif;
     color: #515151;
     font-size: 48px;
@@ -191,10 +191,37 @@ h1::first-letter {
 .content__card {
     padding: 0 30px 100px;
 }
+.content__card .item-content {
+  float: left;
+}
 .content__card .item-content:not(:last-child) {
-float: left;
 margin-right: 30px;
 }
 .content__card .item-content img {
     display: block;
+}
+.price-content {
+  width: 255px;
+  padding-left: 14px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #323232;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+.price-content span {
+  float: right;
+  background-color: rgba(255, 255, 255, 0.44);
+  width: 54px;
+  text-align: center;
+}
+.price-content a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.item-content:hover .price-content {
+  background-color: #1abc9c;
 }
