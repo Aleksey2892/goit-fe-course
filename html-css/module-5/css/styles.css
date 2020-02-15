@@ -200,17 +200,55 @@ margin-right: 30px;
 .content__card .item-content img {
     display: block;
 }
+/* Overlay card start */
 .content__overlay {
-  width: 235px;
-  height: 261px;
-  position: absolute;
-  left: 10px;
-  top: 11px;
   background-color: rgba(0, 0, 0, 0.549);
+  width: 100%;
+  height: 100%;
+  border: 10px solid transparent;
+  background-clip: padding-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.icons-overlay {
+  width: 166px;
+  height: 107px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.icons-overlay button {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  display: block;
+  float: left;
+  
+}
+.icons-overlay button.btn-basket {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  width: 166px;
+  height: 50px;
+  background-color: #323232;
 }
 .item-content {
   position: relative;
 }
+.content__overlay_container {
+  position: relative;
+}
+
+/* Overlay card end */
+
 .price-content {
   position: relative;
   width: 255px;
