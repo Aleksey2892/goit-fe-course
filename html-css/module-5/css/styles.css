@@ -200,6 +200,17 @@ margin-right: 30px;
 .content__card .item-content img {
     display: block;
 }
+.content__overlay {
+  width: 235px;
+  height: 261px;
+  position: absolute;
+  left: 10px;
+  top: 11px;
+  background-color: rgba(0, 0, 0, 0.549);
+}
+.item-content {
+  position: relative;
+}
 .price-content {
   position: relative;
   width: 255px;
