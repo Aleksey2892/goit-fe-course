@@ -211,6 +211,11 @@ margin-right: 30px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.content__overlay:hover {
+  opacity: 1;
+  transition: all 0.7s;
 }
 .icons-overlay {
   width: 166px;
@@ -221,24 +226,59 @@ margin-right: 30px;
   transform: translate(-50%, -50%);
 }
 .icons-overlay button {
+  cursor: pointer;
   width: 50px;
   height: 50px;
   background-color: transparent;
   border: 1px solid #fff;
   display: block;
   float: left;
-  
+}
+.icons-overlay .btn:hover {
+  background-color: #1abc9c;
+}
+.icons-overlay .btn {
+  position: relative;
+  margin: 0 8px 8px 0;
+}
+.icons-overlay .btn:nth-last-child(-n+2) {
+  margin: 0 0 8px;
+}
+.icons-overlay .btn>img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .icons-overlay button.btn-basket {
+
+  width: 166px;
+  height: 50px;
+  background-color: #323232;
+}
+.icons-overlay button.btn-basket:hover {
+  background-color: #1abc9c;
+}
+.icons-overlay .btn-basket {
+  position: relative;
+}
+.icons-overlay .btn-basket>img {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translatey(-50%);
+}
+.icons-overlay .btn-basket::after {
+  content: "ADD TO CART";
+  display: block;
+  text-align: right;
+  padding-right: 23px;
   font-family: 'Open Sans', sans-serif;
+  color: #fff;
   font-size: 14px;
   line-height: 32px;
   font-weight: 400;
   letter-spacing: -0.02em;
-  color: #ffffff;
-  width: 166px;
-  height: 50px;
-  background-color: #323232;
 }
 .item-content {
   position: relative;
