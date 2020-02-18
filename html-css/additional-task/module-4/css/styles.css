@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+*.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+p {
+    text-transform: uppercase;
+    padding: 20px;
+    font-weight: 900;
+    text-decoration: underline;
+}
+.menu {
+    list-style-type: none;
+    text-transform: uppercase;
+    
+    color: darkgreen;
+    border: 1px solid;
+    padding: 10px;
+    float: left;
+    margin: 20px;
+    
+}
+.menu-item {
+    float: left;
+    padding: 10px;
+    cursor: pointer;
+}
+.menu-item:hover {
+    color: red;
+    background-color: seagreen;
+}
+.color-list {
+    list-style-type: none;
+    text-transform: uppercase;
+    padding-left: 20px;
+    color: #0E1116;
+}
+.color-item:nth-child(3n+1) {
+    background-color: #88292F;
+}
+.color-item:nth-child(3n+2) {
+    background-color: #5DB7DE;
+}
+.color-item:nth-child(3n+3) {
+    background-color: #0D5D56;
+}
+.before {
+    list-style-type: none;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+.before-item::before {
+    content: "\2192";
+}
+.variable {
+    list-style-type: none;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+.variable-item {
+    counter-increment: V;
+}
+.variable-item::before {
+    content: counter(V, lower-roman);
+    color: red;
+    border: 2px solid;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    padding: 30px;
+    margin: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
