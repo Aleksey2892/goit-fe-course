@@ -166,6 +166,9 @@ h1::first-letter {
 
 /* Main content new collection start*/
 
+section.content {
+  background-color: #e9f0fd;
+}
 .content__wrapper {
     width: 1170px;
     margin: 0 auto;
