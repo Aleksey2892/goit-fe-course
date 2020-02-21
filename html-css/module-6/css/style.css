@@ -1,0 +1,120 @@
+/* Global settings START */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+* a {
+    text-decoration: none;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+:root {
+    --family-roboto: 'Roboto', sans-serif;
+    --family-montserrat: 'Montserrat', sans-serif;
+    --family-kaushan: 'Kaushan Script', cursive;
+    --weight-light_italic: 300;
+    --weight-regular: 400;
+    --weight-bold: 700;
+}
+/* Global settings END */
+
+/* Header section START */
+.header__wrap_flex {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.header__logo {
+    margin: 0;
+}
+.header__logo a {
+    color: #95e1d3;
+    font-size: 30px;
+    font-family: var(--family-montserrat);
+    font-weight: var(--weight-bold);
+    line-height: 36px;
+}
+.header__menu_flex {
+    display: flex;
+    justify-content: space-between;
+    width: 491px;
+    cursor: pointer;
+}
+.header__item a {
+    color: #95e1d3;
+    font-size: 14px;
+    font-family: var(--family-montserrat);
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: ;
+    text-transform: uppercase;
+}
+.header__item a::after {
+    content: "";
+    display: block;
+    margin: 10px auto 0;
+    background-color: rgba(243, 129, 129, 0);
+    width: 100%;
+    height: 3px;
+}
+.header__item a:hover, .header__item a:focus {
+    color: #f38181;
+    transition: all 200ms;
+}
+.header__item a:hover::after, .header__item a:focus:after {
+    content: "";
+    display: block;
+    margin: 10px auto 0;
+    background-color: rgba(243, 129, 129, 1);
+    width: 100%;
+    height: 3px;
+    transition: all 200ms;
+}
+/* Header section END */
+
+/* Content wrapper */
+div.content_wrap {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+/* Amazing Service START */
+.title-services {
+    text-align: center;
+    padding-top: 115px;
+}
+.title-services p {
+    color: #333333;
+    font-size: 24px;
+    font-family: var(--family-kaushan);
+    font-weight: var(--weight-regular);
+    line-height: 29px;
+    padding-bottom: 18px;
+}
+.title-services h2 {
+    color: #333333;
+    font-size: 30px;
+    font-family: var(--family-montserrat);
+    font-weight: var(--weight-bold);
+    line-height: 36px;
+    text-transform: uppercase;
+}
+.title-services::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 0 auto;
+    margin-top: 39px;
+}
