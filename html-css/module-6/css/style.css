@@ -122,7 +122,7 @@ div.main__content-wrap {
 /* Amazing Service title END */
 
 /* Amazing Service item START */
-.services__menu_flex {
+.services__overview_flex {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
