@@ -236,14 +236,42 @@ div.main__content-wrap {
 }
 /* Our Team title END */
 
-/* Our Team card START */
+/* Our Team about */
 p.our-team__about {
     width: 980px;
-    margin: 0 auto;
+    margin: 0 auto 88px;
     text-align: center;
     color: #999999;
     font-size: 15px;
     font-family: var(--family-roboto);
     font-weight: var(--weight-regular);
     line-height: 24px;
+}
+/* Our Team card START */
+.our-team__container-card_flex {
+    margin-bottom: 82px;
+    display: flex;
+    justify-content: space-between;
+}
+.our-team-card img {
+    display: block;
+}
+.our-team-card h3 {
+    padding: 30px 0 12px;
+    color: #333333;
+    font-size: 14px;
+    font-family: var(--family-montserrat);
+    font-weight: var(--weight-regular);
+    line-height: 17px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.our-team-card p {
+    color: #999999;
+    font-size: 15px;
+    font-family: var(--family-roboto);
+    font-weight: var(--weight-light_italic);
+    font-style: italic;
+    line-height: 24px;
+    text-align: center;
 }
