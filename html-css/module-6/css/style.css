@@ -336,6 +336,8 @@ p.team__about {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-top: #e7e7e7 1px solid;
 }
 footer p {
     color: #333333;
@@ -346,4 +348,30 @@ footer p {
 }
 footer a {
     color: #f38181;
+}
+input {
+    border: #e7e7e7 1px solid;
+    width: 230px;
+    height: 39px;
+    padding-left: 12px;
+}
+input::placeholder {
+    color: #cccccc;
+    font-size: 15px;
+    font-family: var(--family-roboto);
+    font-weight: var(--weight-light_italic);
+    line-height: 40px;
+}
+.subscribe__btn_input button {
+    color: #ffffff;
+    font-size: 14px;
+    font-family: var(--family-montserrat);
+    font-weight: var(--weight-bold);
+    line-height: 17px;
+    background-color: #95e1d3;
+    width: 150px;
+    height: 40px;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
 }
