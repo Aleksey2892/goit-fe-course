@@ -122,15 +122,55 @@ div.main__content-wrap {
     transform: rotatey(180deg);}
     100% {transform: rotatez(0);}
 }
-.services__title h2, .team__title h2{
-    animation-name: title-animation;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-}
-.team__title h2{
+.services__title h2, .team__title h2 {
     animation-name: title-animation;
     animation-duration: 3s;
     animation-timing-function: ease-out;
+}
+@keyframes title-animation-span_top_left {
+    0% {transform: translatex(-1000px);
+        opacity: 0;}
+    50% {transform: translateX(0);
+        transform: rotate(-180deg);}
+    75% {transform: rotatez(20deg);
+        opacity: 1;
+    transform: rotatey(180deg);}
+    100% {transform: rotatez(0);}
+}
+.services__title span {
+    animation-name: title-animation-span_top_left;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+}
+@keyframes title-animation_bottom_right {
+    0% {transform: translateX(1000px);
+        opacity: 0;}
+    50% {transform: translateX(0);
+        transform: rotate(-180deg);}
+    75% {transform: rotatez(20deg);
+        opacity: 1;
+    transform: rotatey(180deg);}
+    100% {transform: rotatez(0);}
+}
+.team__title h2 {
+    animation-name: title-animation_bottom_right;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+}
+@keyframes title-animation-span_bottom_right {
+    0% {transform: translatey(1000px);
+        opacity: 0;}
+    50% {transform: translateX(0);
+        transform: rotate(-180deg);}
+    75% {transform: rotatez(20deg);
+        opacity: 1;
+    transform: rotatey(180deg);}
+    100% {transform: rotatez(0);}
+}
+.team__title span {
+    animation-name: title-animation-span_bottom_right;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
 }
 /* Title animation END */
 .services__title::after {
@@ -156,9 +196,18 @@ div.main__content-wrap {
     animation-duration: 5s;
     animation-timing-function: ease-out;
 }
+@keyframes line-animation_bottom_left {
+    0% {transform: translateX(-1000px);
+        opacity: 0;}
+    50% {transform: translateX(0);
+        transform: rotate(-180deg);}
+    75% {transform: rotatex(180deg);
+        opacity: 1;}
+    100% {transform: rotatex(180deg);}
+}
 .team__title::after {
-    animation-name: line-animation;
-    animation-duration: 6s;
+    animation-name: line-animation_bottom_left;
+    animation-duration: 7s;
     animation-timing-function: ease-out;
 }
 /* Line animation END */
@@ -346,8 +395,8 @@ p.team__about {
 .team-card_overlay-box_flex::before {
     content: "";
     display: block;
-    width: 380px;
-    height: 470px;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(to top, #fce38a, #f38181);
     opacity: 0;
     position: absolute;
@@ -417,6 +466,7 @@ input::placeholder {
     font-size: 15px;
     font-family: var(--family-roboto);
     font-weight: var(--weight-light_italic);
+    font-style: italic;
     line-height: 40px;
 }
 .subscribe__btn_input button {
