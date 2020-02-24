@@ -44,20 +44,6 @@
     font-weight: var(--weight-bold);
     line-height: 36px;
 }
-/* Animation logo START */
-@keyframes logo-animation {
-from {transform: translateX(-1000px);
-     opacity: 0;
-}
-to {transform: translateX(0);
-    opacity: 1;}
-}
-.header__logo {
-    animation: logo-animation;
-    animation-duration: 2.5s;
-    animation-timing-function: ease-out;
-    }
-/* Animation logo END */
 .header__menu_flex {
     display: flex;
     justify-content: space-between;
@@ -125,6 +111,28 @@ div.main__content-wrap {
     line-height: 36px;
     text-transform: uppercase;
 }
+/* Title animation START */
+@keyframes title-animation {
+    0% {transform: translateX(-1000px);
+        opacity: 0;}
+    50% {transform: translateX(0);
+        transform: rotate(-180deg);}
+    75% {transform: rotatez(20deg);
+        opacity: 1;
+    transform: rotatey(180deg);}
+    100% {transform: rotatez(0);}
+}
+.services__title h2, .team__title h2{
+    animation-name: title-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+.team__title h2{
+    animation-name: title-animation;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+/* Title animation END */
 .services__title::after {
     content: "";
     display: block;
@@ -133,22 +141,27 @@ div.main__content-wrap {
     background-color: #f38181;
     margin: 39px auto;
 }
-/* Title animation START */
-@keyframes title-animation {
-    0% {transform: translateX(-1000px);
+/* Line animation START */
+@keyframes line-animation {
+    0% {transform: translateX(1000px);
         opacity: 0;}
     50% {transform: translateX(0);
         transform: rotate(-180deg);}
-    75% {transform: rotatez(20deg);
+    75% {transform: rotatex(180deg);
         opacity: 1;}
-    100% {transform: rotatez(0);}
+    100% {transform: rotatex(180deg);}
 }
 .services__title::after, .team__title::after {
-    animation-name: title-animation;
-    animation-duration: 3s;
-    animation-timing-function: ease;
+    animation-name: line-animation;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
 }
-/* Title animation END */
+.team__title::after {
+    animation-name: line-animation;
+    animation-duration: 6s;
+    animation-timing-function: ease-out;
+}
+/* Line animation END */
 /* Amazing Service title END */
 
 /* Amazing Service item START */
@@ -232,15 +245,15 @@ div.main__content-wrap {
 }
 /* Icon animation START */
 @keyframes icon-animation {
-    from {transform: rotatex(180deg);
+    from {transform: rotatey(-90deg);
           opacity: 0;
     }
-    to {transform: rotatex(0);
+    to {transform: rotatey(0);
         opacity: 1;}
     }
 .services-item {
     animation-name: icon-animation;
-    animation-duration: 1.2s;
+    animation-duration: 5s;
     animation-timing-function: ease-in;
 }
 /* Icon animation END */
