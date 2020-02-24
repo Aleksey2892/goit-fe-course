@@ -139,7 +139,7 @@ div.main__content-wrap {
     width: 60px;
     height: 3px;
     background-color: #f38181;
-    margin: 39px auto;
+    margin: 39px auto 0;
 }
 /* Line animation START */
 @keyframes line-animation {
