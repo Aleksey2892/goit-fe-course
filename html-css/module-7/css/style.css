@@ -1,0 +1,127 @@
+/* Global settings "START" */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+* a {
+    text-decoration: none;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Global settings "END" */
+
+/* Header "START" */
+.header_wrap {
+    width: 940px;
+    height: 65px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.header__logo {
+    margin: 0;
+}
+.header__logo a {
+    font-family: 'Wisdom Script Regular';
+    color: #fed136;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 41px;
+    letter-spacing: 0.05em;
+}
+.header__nav {
+    display: flex;
+    width: 485px;
+    justify-content: space-between;
+}
+.header__item a {
+    font-family: 'Montserrat';
+    font-style: normal;
+    color: #222222;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+.header__item a:hover, .header__item a:focus {
+    color: #fed136;
+}
+/* Header "END" */
+
+/* Section Services "START"*/
+.main_wrap {
+    width: 940px;
+    margin: 0 auto;
+}
+.services__title {
+    text-align: center;
+    padding-top: 96px;
+    margin-bottom: 149px;
+}
+.services__title h2 {
+    color: #222222;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 75px;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+}
+.services__title p {
+    color: #777777;
+    font-family: "Droid Serif";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+.services__about {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+.services-item {
+    width: 275px;
+    position: relative;
+}
+.services-item h3 {
+    font-family: 'Montserrat';
+    color: #222222;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    margin-bottom: 10px;
+}
+.services-item p {
+    font-family: 'Roboto Slab';
+    color: #777777;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 23px;
+    letter-spacing: -0.025em;
+}
+.services-item.basket::before {
+    content: "";
+    display: block;
+    position: absolute;
+    
+    width: 72px;
+    height: 72px;
+    padding-top: 17px;
+    border: 3px solid #fed136;
+    border-radius: 50%;
+    background-image: url(../img/Icon-Basket.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
