@@ -58,14 +58,13 @@
 /* Header "END" */
 
 /* Section Services "START"*/
-.main_wrap {
+.services_wrap {
     width: 940px;
     margin: 0 auto;
 }
 .services__title {
     text-align: center;
     padding-top: 96px;
-    margin-bottom: 149px;
 }
 .services__title h2 {
     color: #222222;
@@ -93,6 +92,7 @@
 .services-item {
     width: 275px;
     position: relative;
+    padding: 174px 0 120px;
 }
 .services-item h3 {
     font-family: 'Montserrat';
@@ -111,17 +111,30 @@
     line-height: 23px;
     letter-spacing: -0.025em;
 }
-.services-item.basket::before {
+.services-item.basket::before, .services-item.laptop::before, .services-item.locked::before {
     content: "";
     display: block;
     position: absolute;
-    
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 100%);
     width: 72px;
     height: 72px;
-    padding-top: 17px;
     border: 3px solid #fed136;
     border-radius: 50%;
     background-image: url(../img/Icon-Basket.png);
     background-repeat: no-repeat;
     background-position: center;
+}
+.services-item.laptop::before {
+    background-image: url(../img/Icon-Laptop.png);
+}
+.services-item.locked::before {
+    background-image: url(../img/Icon-Locked.png);
+}
+/* Section Services "END"*/
+
+/* Contact "START"*/
+.contact_wrap {
+    background-color: #222222;
 }
