@@ -201,7 +201,6 @@ form input::placeholder, form textarea::placeholder {
 }
 form input.outline:required:valid, form textarea.outline:required:valid {
     outline-color: rgb(173, 255, 47);
-    border: 2px solid rgb(173, 255, 47);
 }
 form input.outline:required:invalid, form textarea.outline:required:invalid {
     outline-color: rgb(255, 0, 0);
