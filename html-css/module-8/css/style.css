@@ -1,0 +1,124 @@
+/* Global settings "START" */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+* a {
+    text-decoration: none;
+}
+:root {
+    --font-roboto: 'Roboto', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+}
+.content-wrapper {
+    width: 320px;
+}
+/* Global settings "END" */
+
+/* Header "START" */
+nav {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 115px;
+}
+nav button {
+    border: 2px solid transparent;
+    color: #ffffff;
+    padding: 10px 18px 10px 18px;
+    font-family: var(--font-montserrat);
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 700;
+    background-color: transparent;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+nav button a {
+    color: #ffffff;
+}
+nav button:hover {
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+}
+.banner_wrap {
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 320px;
+    min-height: 540px;
+}
+/* Header "END" */
+
+/* Content in banner "START" */
+p.banner__title {
+    font-family: var(--font-montserrat);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-bottom: 37px;
+}
+h1.banner__title {
+    font-family: var(--font-montserrat);
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 300px;
+    margin: 0 auto 17px;
+}
+p.banner__subtitle {
+    font-family: var(--font-roboto);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1;
+    text-align: center;
+    width: 220px;
+    margin: 0 auto 20px;
+}
+.banner__button button {
+    font-family: var(--font-montserrat);
+    color: #ffffff;
+    border: 0;
+    padding: 14px 51px 14px 51px;
+    border-radius: 44px;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 700;
+    background-color: #ff4e50;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: flex;
+}
+.banner__button button a {
+    color: #ffffff;
+}
+.banner__button {
+    display: flex;
+    justify-content: center;
+}
+/* Content in banner "END" */
+
+/* Content "START" */
+.content.wrapper h2 {
+    font-family: var(--font-montserrat);
+    color: #333333;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 70px 0 0;
+    text-align: center;
+    width: 270px;
+    margin: 0 auto;
+}
