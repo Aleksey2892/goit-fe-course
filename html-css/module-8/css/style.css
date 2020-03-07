@@ -101,7 +101,6 @@ p.banner__subtitle {
     background-color: #ff4e50;
     transition: all 0.2s;
     cursor: pointer;
-    display: flex;
 }
 .banner__button button a {
     color: #ffffff;
@@ -124,13 +123,20 @@ p.banner__subtitle {
     font-size: 22px;
     font-weight: 700;
     line-height: 1;
-    padding: 70px 0 0;
+    padding: 70px 0 15px;
     text-align: center;
     width: 270px;
     margin: 0 auto;
 }
 .content__cards {
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.card-item {
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
@@ -139,10 +145,12 @@ p.banner__subtitle {
     border: transparent;
     border-radius: 50%;
 }
-.card-item {
+.card-icon_box {
+    width: 126px;
+    height: 126px;
     position: relative;
 }
-.card-item::after {
+.card-icon_box::after {
     position: absolute;
     border: 4px solid #ffffff;
     border-radius: 50%;
@@ -154,26 +162,71 @@ p.banner__subtitle {
     height: 40px;
     background-color: #ff4e50;
 }
-.card-item.red-icon::after {
+.card-icon_box.red-icon::after {
     background-image: url(../img/red-icon.png);
     background-repeat: no-repeat;
     background-position: left 50% top 50%;
 }
-.card-item.yellow-icon::after {
+.card-icon_box.yellow-icon::after {
     background-image: url(../img/yellow-icon.png);
     background-repeat: no-repeat;
     background-position: left 50% top 50%;
     background-color: #ffa507;
 }
-.card-item.green-icon::after {
+.card-icon_box.green-icon::after {
     background-image: url(../img/green-icon.png);
     background-repeat: no-repeat;
     background-position: left 50% top 40%;
     background-color: #1cd7ad;
 }
-.card-item.blue-icon::after {
+.card-icon_box.blue-icon::after {
     background-image: url(../img/blue-icon.png);
     background-repeat: no-repeat;
     background-position: left 40% top 50%;
     background-color: #4e73db;
 }
+.card-item {
+    width: 205px;
+    text-align: center;
+}
+.card-item h3 {
+    color: #333333;
+    font-family: var(--font-montserrat);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 21px 0 15px;
+}
+.card-item p {
+    color: #666666;
+    font-family: var(--font-roboto);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+    padding: 0 0 28px;
+}
+.content__button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 57px;
+}
+.team-cards button {
+    border: 2px solid;
+    border-radius: 20px;
+    color: #ff4e50;
+    padding: 10px 75px 10px 75px;
+    font-family: var(--font-montserrat);
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 700;
+    background-color: transparent;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.team-cards button:hover {
+    border: 2px solid #ff4e50;
+    background-color: #ff4e50;
+    border-radius: 5px;
+    color: #ffffff;
+}
+/* Content "END" */
