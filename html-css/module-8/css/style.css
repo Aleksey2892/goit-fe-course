@@ -165,7 +165,7 @@ p.banner__subtitle {
     display: block;
     border: transparent;
     border-radius: 50%;
-    transition: all 0.8s;
+    transition: transform 0.8s;
 }
 .card-icon_box {
     width: 126px;
