@@ -1,0 +1,95 @@
+/* Screen 768 "START" */
+@media screen and (min-width: 768px) {
+    /* Navigation "START" */
+    header {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    nav {
+        padding-left: 340px;
+    }
+    h1.banner__title {
+        padding: 20px 0 115px;
+    }
+    .banner_wrap {
+        min-width: 868px;
+        min-height: 700px;
+    }
+    p.banner__subtitle {
+        font-size: 24px;
+        width: 400px;
+        margin-bottom: 34px;
+    }
+    h2.banner__subtitle {
+        width: 520px;
+        line-height: 62px;
+        margin-bottom: 36px;
+        font-size: 52px;
+    }
+    .banner__button button {
+        padding: 14px 23px 14px 23px;
+    }
+    /* Navigation "END" */
+    /* Content "START" */
+    .content.wrapper {
+        width: 748px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    .content.wrapper h2 {
+        width: 420px;
+        padding-bottom: 30px;
+    }
+    .content__cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 492px;
+        margin-bottom: 38px;
+    }
+    .card-item {
+        padding: 0;
+    }
+    .card-item:nth-child(2n+1) {
+        padding: 0 0 59px;
+    }
+    .card-item.four {
+        order: 3;
+    }
+    .card-item.three {
+        order: 2;
+    }
+    .card-item.two {
+        order: 1;
+    }
+    .content__button button {
+        padding: 14px 30px 14px 30px;
+    }
+        /* Content "END" */
+}
+/* Screen 768 "END" */
+
+/* Screen 941 "START" */
+@media screen and (min-width: 941px) {
+    /* Navigation "START" */
+    .banner_wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header {
+        justify-content: space-between;
+        width: 940px;
+    }
+    nav {
+        padding-left: 0;
+    }
+    .content__cards {
+        width: 950px;
+    }
+}
