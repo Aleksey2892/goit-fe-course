@@ -14,8 +14,7 @@
         padding: 20px 0 115px;
     }
     .banner_wrap {
-        min-width: 868px;
-        min-height: 700px;
+        height: 700px;
     }
     p.banner__subtitle {
         font-size: 24px;

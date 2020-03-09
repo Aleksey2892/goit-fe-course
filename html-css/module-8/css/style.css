@@ -62,13 +62,15 @@ nav button:hover {
 h1.banner__title {
     margin: 0;
     font-family: var(--font-montserrat);
-    color: #ffffff;
     font-size: 20px;
     font-weight: 700;
     line-height: 1;
     letter-spacing: 0.05em;
     text-align: center;
     padding-bottom: 37px;
+}
+h1.banner__title a {
+    color: #ffffff;
 }
 h2.banner__subtitle {
     font-family: var(--font-montserrat);
