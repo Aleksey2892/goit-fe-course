@@ -60,6 +60,9 @@
         width: 492px;
         margin-bottom: 38px;
     }
+    .card-item {
+        padding: 0;
+    }
     .card-item:nth-child(2n+1) {
         padding: 0 0 59px;
     }
