@@ -2,19 +2,28 @@
 @media screen and (min-width: 768px) {
     /* Navigation "START" */
     header {
+        width: 748px;
+        padding: 38px 40px 0;
         display: flex;
         flex-direction: row-reverse;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
     nav {
-        padding-left: 340px;
+        padding: 0;
     }
     h1.banner__title {
-        padding: 20px 0 115px;
+        padding: 0;
     }
     .banner_wrap {
         height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .banner {
+        padding-bottom: 234px;
     }
     p.banner__subtitle {
         font-size: 24px;
@@ -46,13 +55,10 @@
     .content__cards {
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: stretch;
         justify-content: space-between;
-        align-items: baseline;
         width: 492px;
         margin-bottom: 38px;
-    }
-    .card-item {
-        padding: 0;
     }
     .card-item:nth-child(2n+1) {
         padding: 0 0 59px;
@@ -75,20 +81,23 @@
 
 /* Screen 941 "START" */
 @media screen and (min-width: 941px) {
-    /* Navigation "START" */
-    .banner_wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     header {
-        justify-content: space-between;
         width: 940px;
     }
     nav {
         padding-left: 0;
     }
+    .content.wrapper {
+        width: 941px;
+    }
     .content__cards {
-        width: 950px;
+        width: 941px;
+    }
+    .card-item:nth-child(2n+1) {
+        padding: 0;
+    }
+    .content__button {
+        padding-bottom: 73px;
     }
 }
+/* Screen 941 "END" */
