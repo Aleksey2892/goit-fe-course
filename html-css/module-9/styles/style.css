@@ -19,14 +19,11 @@
 /* Header "START" */
 .banner_wrap {
     min-width: 320px;
-    height: 540px;
+    min-height: 540px;
     background-image: url(../img/banner.jpg);
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-}
-nav {
-    padding: 20px 0 115px;
 }
 nav button {
     background-color: transparent;
@@ -56,7 +53,6 @@ h1.banner__title {
     line-height: 1;
     letter-spacing: 0.05em;
     text-align: center;
-    padding-bottom: 37px;
 }
 h1.banner__title a {
     color: #ffffff;
@@ -72,8 +68,6 @@ h2.banner__subtitle {
     line-height: 36px;
     text-align: center;
     text-transform: uppercase;
-    max-width: 300px;
-    min-width: 300px;
     margin-bottom: 17px;
 }
 p.banner__subtitle {
@@ -83,11 +77,7 @@ p.banner__subtitle {
     font-weight: 300;
     line-height: 22px;
     text-align: center;
-    width: 220px;
-    margin-bottom: 31px;
-}
-.banner__button {
-    display: block;
+    margin-bottom: 35px;
 }
 .banner__button button {
     background-color: transparent;
@@ -97,7 +87,6 @@ p.banner__subtitle {
     font-family: var(--font-montserrat);
     border: 2px solid transparent;
     color: #ffffff;
-    padding: 14px 51px 14px 51px;
     border-radius: 44px;
     font-size: 14px;
     line-height: 1;
@@ -111,3 +100,16 @@ p.banner__subtitle {
     border-radius: 8px;
 }
 /* Content in banner "END" */
+
+/* Content "START" */
+.team-cards h2 {
+    font-family: var(--font-montserrat);
+    color: #333333;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    padding: 70px 0 13px;
+    text-align: center;
+    min-width: 270px;
+    max-width: 270px;
+}

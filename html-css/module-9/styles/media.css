@@ -1,0 +1,47 @@
+@media screen and (max-width: 767px) {
+    h1.banner__title {
+        padding-bottom: 37px;
+    }
+    nav {
+        padding: 40px 0 135px;
+    }
+    p.banner__subtitle {
+        width: 220px;
+    }
+    .banner__button button a {
+        padding: 10px 51px 10px 51px;
+        display: block;
+        min-width: 292.39px;
+    }
+    h2.banner__subtitle {
+        max-width: 300px;
+        min-width: 300px;
+    }
+    .banner {
+        padding-bottom: 150px;
+    }
+}
+@media screen and (min-width: 768px) {
+    header {
+        margin-bottom: 135px;
+    }
+    nav {
+        padding: 40px 0 0;
+    }
+    p.banner__subtitle {
+        width: 300px;
+    }
+    .banner {
+        padding-bottom: 234px;
+    }
+    .banner__button button a {
+        padding: 10px 23px 10px 23px;
+    }
+    h2.banner__subtitle {
+        max-width: 520px;
+        line-height: 62px;
+        margin-bottom: 36px;
+        font-size: 52px;
+    }
+
+}
