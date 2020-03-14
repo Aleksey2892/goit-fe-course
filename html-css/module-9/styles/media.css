@@ -46,9 +46,6 @@
     p.banner__subtitle {
         width: 300px;
     }
-    .banner {
-        padding-bottom: 234px;
-    }
     .banner__button button a {
         padding: 10px 23px 10px 23px;
     }
@@ -72,9 +69,18 @@
     .content__cards [class*="col-"]:nth-child(2n+1) {
         margin-bottom: 58px;
     }
+    .banner {
+        padding-bottom: 234px;
+    }
 }
 @media screen and (min-width: 942px) {
     .content__button {
         padding-bottom: 70px;
+    }
+    .banner {
+        padding-bottom: 246px;
+    }
+    .banner_wrap {
+        height: 700px;
     }
 }

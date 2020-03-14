@@ -116,7 +116,6 @@ p.banner__subtitle {
     align-items: center;
     width: 205px;
     text-align: center;
-    /* padding: 0 0 28px; */
 }
 .card-item:hover img {
     transform: scale(1.2);
