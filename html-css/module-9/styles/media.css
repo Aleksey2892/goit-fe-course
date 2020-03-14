@@ -67,7 +67,14 @@
     .team-cards button a {
         padding: 10px 30px 10px 30px;
     }
+}
+@media screen and (min-width: 768px) and (max-width: 941px) {
     .content__cards [class*="col-"]:nth-child(2n+1) {
         margin-bottom: 58px;
+    }
+}
+@media screen and (min-width: 942px) {
+    .content__button {
+        padding-bottom: 70px;
     }
 }
