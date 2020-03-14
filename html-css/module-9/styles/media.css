@@ -7,6 +7,7 @@
     }
     p.banner__subtitle {
         width: 220px;
+        margin-bottom: 35px;
     }
     .banner__button button a {
         padding: 10px 51px 10px 51px;
@@ -19,6 +20,9 @@
     }
     .banner {
         padding-bottom: 150px;
+    }
+    p.banner__subtitle {
+        font-size: 18px;
     }
     .team-cards h2 {
         min-width: 270px;
@@ -44,7 +48,9 @@
         padding: 40px 0 0;
     }
     p.banner__subtitle {
-        width: 300px;
+        min-width: 300px;
+        font-size: 24px;
+        margin-bottom: 50px;
     }
     .banner__button button a {
         padding: 10px 23px 10px 23px;
@@ -54,6 +60,9 @@
         line-height: 62px;
         margin-bottom: 36px;
         font-size: 52px;
+    }
+    p.banner__subtitle {
+
     }
     .team-cards h2 {
         padding: 70px 0 30px;
