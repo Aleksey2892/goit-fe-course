@@ -20,6 +20,21 @@
     .banner {
         padding-bottom: 150px;
     }
+    .team-cards h2 {
+        min-width: 270px;
+        max-width: 270px;
+        padding: 70px 0 13px;
+    }
+    .team-cards button a {
+        padding: 14px 75px 14px 75px;
+        min-width: 290.95px;
+    }
+    .content__button {
+        padding: 28px 0 57px;
+    }
+    .content__cards [class*="col-"]:not(:last-child) {
+        margin-bottom: 28px;
+    }
 }
 @media screen and (min-width: 768px) {
     header {
@@ -43,5 +58,16 @@
         margin-bottom: 36px;
         font-size: 52px;
     }
-
+    .team-cards h2 {
+        padding: 70px 0 30px;
+    }
+    .content__button {
+        padding: 38px 0 40px;
+    }
+    .team-cards button a {
+        padding: 10px 30px 10px 30px;
+    }
+    .content__cards [class*="col-"]:nth-child(2n+1) {
+        margin-bottom: 58px;
+    }
 }

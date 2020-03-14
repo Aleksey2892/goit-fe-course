@@ -108,8 +108,107 @@ p.banner__subtitle {
     font-size: 22px;
     font-weight: 700;
     line-height: 26px;
-    padding: 70px 0 13px;
     text-align: center;
-    min-width: 270px;
-    max-width: 270px;
+}
+.card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 205px;
+    text-align: center;
+    /* padding: 0 0 28px; */
+}
+.card-item:hover img {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+.card-item:hover .card-icon_box::after {
+    transform: translate(23px, 23px);
+    opacity: 0.5;
+    transition: transform, opacity, 0.6s;
+}
+.card-item img {
+    display: block;
+    border: transparent;
+    border-radius: 50%;
+    transition: transform 0.8s;
+}
+.card-icon_box {
+    width: 126px;
+    height: 126px;
+    position: relative;
+}
+.card-icon_box::after {
+    position: absolute;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    bottom: -4px;
+    right: 0;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #ff4e50;
+    transition: all 0.8s;
+}
+.card-icon_box.red-icon::after {
+    background-image: url(../img/red-icon.png);
+    background-repeat: no-repeat;
+    background-position: left 50% top 50%;
+}
+.card-icon_box.yellow-icon::after {
+    background-image: url(../img/yellow-icon.png);
+    background-repeat: no-repeat;
+    background-position: left 50% top 50%;
+    background-color: #ffa507;
+}
+.card-icon_box.green-icon::after {
+    background-image: url(../img/green-icon.png);
+    background-repeat: no-repeat;
+    background-position: left 50% top 40%;
+    background-color: #1cd7ad;
+}
+.card-icon_box.blue-icon::after {
+    background-image: url(../img/blue-icon.png);
+    background-repeat: no-repeat;
+    background-position: left 40% top 50%;
+    background-color: #4e73db;
+}
+.card-item h3 {
+    color: #333333;
+    font-family: var(--font-montserrat);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 21px 0 15px;
+}
+.card-item p {
+    color: #666666;
+    font-family: var(--font-roboto);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+}
+.content__button button {
+    background-color: transparent;
+    border: 0 transparent;
+}
+.team-cards button a {
+    border: 2px solid;
+    border-radius: 20px;
+    color: #ff4e50;
+    font-family: var(--font-montserrat);
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 700;
+    background-color: transparent;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: block;
+}
+.team-cards button a:hover {
+    border: 2px solid #ff4e50;
+    background-color: #ff4e50;
+    border-radius: 5px;
+    color: #ffffff;
 }
