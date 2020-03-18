@@ -1,0 +1,30 @@
+/* Global settings "START" */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+    --family-montserrat: 'Montserrat', sans-serif;
+    --family-kaushan: 'Kaushan Script', cursive;
+    --family-roboto: 'Roboto', sans-serif;
+}
+.list {
+    list-style-type: none;
+}
+.link {
+    text-decoration: none;
+    color: #ffffff;
+}
+.container {
+    width: 1201px;
+    margin: 0 auto;
+}
+/* Global settings "END" */
+
+/* Other "START" */
+.page-navigation__menu-nav {
+    width: 611px;
+}

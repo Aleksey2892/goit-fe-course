@@ -1,0 +1,21 @@
+.menu-nav {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--family-montserrat);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.menu-nav__link:hover {
+    color: #fce38a;
+}
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+}
+.menu-nav {
+
+}

@@ -1,0 +1,12 @@
+.banner-img {
+    background-image: url(../../img/banner-img.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 1920px;
+}
+.banner-img__gradient {
+    background: linear-gradient(to top, #fce38a, #f38181);
+    opacity: 0.9;
+    height: 1000px;
+}
