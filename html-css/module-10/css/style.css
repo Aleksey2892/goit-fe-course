@@ -2,5 +2,6 @@
 @import "./banner/banner.css";
 @import "./logo/logo.css";
 @import "./nav/nav.css";
+@import "./banner-title/banner-title.css";
 
 @import "./media/media.css";

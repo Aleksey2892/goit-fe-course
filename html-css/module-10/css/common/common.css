@@ -10,7 +10,7 @@
     --family-montserrat: 'Montserrat', sans-serif;
     --family-kaushan: 'Kaushan Script', cursive;
     --family-roboto: 'Roboto', sans-serif;
-    --gradient-yellow-red: linear-gradient(to top, #fce38a, #f38181);
+    --gradient-yellow-red: linear-gradient(to top, rgba(252, 227, 138, 0.9), rgba(243, 129, 129, 0.9));
 }
 .list {
     list-style-type: none;
@@ -19,12 +19,13 @@
     text-decoration: none;
 }
 .container {
-    width: 1201px;
+    width: 1200px;
     margin: 0 auto;
 }
 /* Global settings "END" */
 
-/* Other "START" */
+/* Other */
+/* BANNER HERE "START" */
 .page-navigation {
     display: flex;
     justify-content: space-between;
@@ -39,4 +40,26 @@
 }
 .page-navigation__icon {
     fill: #ffffff;
+}
+.page-header {
+    margin-bottom: 164px;
+}
+.banner-img__banner-title {
+    width: 840px;
+    padding-bottom: 230px;
+}
+.banner-img__subtitle {
+    color: #ffffff;
+}
+.banner-img__welcome {
+    color: #ffffff;
+}
+.banner-img__btn {
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 0;
+}
+.banner-img__link {
+    color: #ffffff;
+    border: 3px solid #ffffff;
 }
