@@ -5,6 +5,9 @@
     font-weight: bold;
     line-height: 1;
 }
+.site-logo__link {
+    transition: color linear 0.2s;
+}
 .site-logo__link:hover {
     color: #fce38a;
 }

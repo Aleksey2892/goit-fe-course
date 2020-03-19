@@ -7,15 +7,27 @@
     line-height: 1;
     text-transform: uppercase;
 }
+.menu-nav__link {
+    transition: color linear 0.2s;
+}
 .menu-nav__link:hover {
     color: #fce38a;
 }
-.page-navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 40px;
+.menu-nav__icon {
+    transition: fill linear 0.2s;
 }
-.menu-nav {
-
+.menu-nav__icon:hover {
+    fill: #fce38a;
+}
+.menu-nav__link::after {
+    content: "";
+    display: block;
+    margin: 12px auto 0;
+    background-color: rgba(252, 227, 138, 0);
+    width: 100%;
+    height: 3px;
+    transition: background-color, linear 0.2s;
+}
+.menu-nav__link:hover::after {
+    background-color: rgba(252, 227, 138, 1);
 }
