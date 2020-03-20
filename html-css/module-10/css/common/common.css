@@ -127,3 +127,23 @@
     width: 1200px;
     margin-bottom: 82px;
 }
+
+/* SECTION FOOTER HERE "START"*/
+.page-footer {
+    width: 1200px;
+    height: 62px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e7e7e7;
+}
+.page-footer__license {
+    font-family: var(--family-montserrat);
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+}
+.page-footer__link {
+    color: #f38181;
+}

@@ -1,0 +1,27 @@
+.form-sbsc__input {
+    border: 1px solid #e7e7e7;
+    width: 230px;
+    height: 39px;
+    padding-left: 12px;
+}
+.form-sbsc__input::placeholder {
+    font-family: var(--family-roboto);
+    color: #cccccc;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 40px;
+}
+.form-sbsc__btn {
+    font-family: var(--family-montserrat);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    background-color: #95e1d3;
+    width: 150px;
+    height: 40px;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+}
