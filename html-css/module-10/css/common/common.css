@@ -63,3 +63,54 @@
     color: #ffffff;
     border: 3px solid #ffffff;
 }
+/* BANNER HERE "END" */
+
+/* CONTENT FEATURES HERE "START"*/
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page-main__section-features {
+    padding-top: 46px;
+    margin-bottom: 90px;
+}
+.page-main__title {
+    text-align: center;
+    color: #333333;
+    font-family: var(--family-kaushan);
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    width: 400px;
+
+}
+.section-features__title {
+    margin-bottom: 66px;
+}
+.page-main__subtitle {
+    margin-top: 16px;
+    color: #333333;
+    font-family: var(--family-montserrat);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+}
+.page-main__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 39px auto 0;
+}
+
+.section-team__title {
+    margin-bottom: 42px;
+}
+/* CONTENT FEATURES HERE "END"*/
+
+/* CONTENT TEAM HERE "START"*/

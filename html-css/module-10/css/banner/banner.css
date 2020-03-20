@@ -3,7 +3,7 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 1920px;
+    width: 100%;
 }
 .banner-img__gradient {
     background: var(--gradient-yellow-red);
