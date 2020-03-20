@@ -12,6 +12,7 @@
     --family-roboto: 'Roboto', sans-serif;
     --gradient-yellow-red: linear-gradient(to top, rgba(252, 227, 138, 0.9), rgba(243, 129, 129, 0.9));
 }
+/* Other */
 .list {
     list-style-type: none;
 }
@@ -24,7 +25,6 @@
 }
 /* Global settings "END" */
 
-/* Other */
 /* BANNER HERE "START" */
 .page-navigation {
     display: flex;

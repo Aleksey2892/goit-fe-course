@@ -11,6 +11,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all linear 0.2s;
+}
+.card:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: #95e1d3 10px 10px;
 }
 .card::before {
     content: "";
@@ -22,14 +27,18 @@
     position: absolute;
     transition: all linear 0.2s;
 }
-.card:hover::before {
+.card:hover::before, .card:hover .card__menu {
     opacity: 1;
+    transform: translateY(0);
 }
 .card__menu {
     position: absolute;
     width: 223px;
     display: flex;
     justify-content: space-between;
+    transform: translateY(-260px);
+    opacity: 0;
+    transition: all linear 0.2s;
 }
 .card__link {
     display: block;
@@ -39,11 +48,19 @@
     justify-content: center;
     align-items: center;
     background-color: #fce38a;
+    transition: all linear 0.2s;
+}
+.card__link:hover {
+    background-color: #f38181;
 }
 .card__icon {
     width: 26px;
     height: 26px;
     fill: #f38181;
+    transition: fill linear 0.2s;
+}
+.card__link:hover .card__icon {
+    fill: #ffffff;
 }
 .team-cards__name {
     margin: 30px 0 12px;
