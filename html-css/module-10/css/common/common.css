@@ -54,11 +54,6 @@
 .banner-img__welcome {
     color: #ffffff;
 }
-.banner-img__btn {
-    background-color: transparent;
-    text-transform: uppercase;
-    border: 0;
-}
 .banner-img__link {
     color: #ffffff;
     border: 3px solid #ffffff;

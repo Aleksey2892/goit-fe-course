@@ -1,5 +1,8 @@
 .banner-title {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .banner-title__subtitle {
     font-family: var(--family-kaushan);
@@ -23,6 +26,10 @@
     line-height: 17px;
     padding: 10px 30px 10px 30px;
     transition: all linear 0.2s;
+    background-color: transparent;
+    text-transform: uppercase;
+    width: 165px;
+
 }
 .banner-title__link:hover {
     color: rgba(243, 129, 129, 0.7);
@@ -30,4 +37,5 @@
     padding: 10px 100px 10px 100px;
     border-radius: 20px;
     box-shadow: #fce38a 1px 1px 10px 10px;
+    width: 305px;
 }
