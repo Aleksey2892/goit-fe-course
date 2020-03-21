@@ -1,8 +1,17 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 .banner-title {
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .banner-title__subtitle {
     font-family: var(--family-kaushan);
@@ -25,6 +34,8 @@
     font-weight: 700;
     line-height: 17px;
     padding: 10px 30px 10px 30px;
+    -webkit-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
     transition: all linear 0.2s;
     background-color: transparent;
     text-transform: uppercase;
@@ -36,6 +47,7 @@
     background-color: #ffffff;
     padding: 10px 100px 10px 100px;
     border-radius: 20px;
-    box-shadow: #fce38a 1px 1px 10px 10px;
+    -webkit-box-shadow: #fce38a 1px 1px 10px 10px;
+            box-shadow: #fce38a 1px 1px 10px 10px;
     width: 305px;
 }

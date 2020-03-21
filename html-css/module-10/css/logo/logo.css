@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 .site-logo {
     margin: 0;
     font-family: var(--family-montserrat);
@@ -6,6 +8,8 @@
     line-height: 1;
 }
 .site-logo__link {
+    -webkit-transition: color linear 0.2s;
+    -o-transition: color linear 0.2s;
     transition: color linear 0.2s;
 }
 .site-logo__link:hover {
