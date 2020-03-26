@@ -1,0 +1,23 @@
+.banner-img {
+  background-image: $main-gradient, url(../images/banner-img.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  color: $color-white;
+  min-height: 1000px;
+}
+
+.page-header {
+  @extend %container;
+  margin-bottom: 164px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 40px;
+}
+
+.banner-title {
+  @extend %container;
+  padding-bottom: 230px;
+}

@@ -1,0 +1,68 @@
+.page-main {
+  @extend %container;
+
+  &__title {
+    text-align: center;
+    color: $color-main;
+    font-family: $font-kaushan;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    width: 400px;
+  }
+
+  &__title::after {
+    display: block;
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: $color-secondary;
+    margin: 39px auto 0;
+  }
+
+  &__subtitle {
+    margin-top: 16px;
+    color: $color-main;
+    font-family: $font-montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+  }
+
+  &__about {
+    width: 980px;
+    margin-bottom: 88px;
+    text-align: center;
+    font-family: $font-roboto;
+    color: #999999;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__team-cards {
+    margin-bottom: 82px;
+  }
+}
+
+.main-section {
+  @include flex(flex, column, center);
+}
+
+.section-features {
+  padding-top: 46px;
+  margin-bottom: 90px;
+
+  &__title {
+    margin-bottom: 66px;
+  }
+}
+
+.section-team {
+  &__title {
+    margin-bottom: 42px;
+  }
+}

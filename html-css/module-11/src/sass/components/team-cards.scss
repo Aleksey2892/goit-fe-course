@@ -1,0 +1,98 @@
+.team-cards {
+  @extend %list;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 1200px;
+
+  &__name {
+    margin: 30px 0 12px;
+    color: $color-main;
+    font-family: $font-roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    text-transform: uppercase;
+  }
+
+  &__rank {
+    color: #999999;
+    font-family: $font-roboto;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 24px;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all linear 0.2s;
+
+  &:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: #95e1d3 10px 10px;
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &::before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: $main-gradient;
+    opacity: 0;
+    position: absolute;
+    transition: all linear 0.2s;
+  }
+
+  &:hover::before,
+  &:hover &__menu {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__menu {
+    @extend %list;
+    position: absolute;
+    width: 223px;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-260px);
+    opacity: 0;
+    transition: all linear 0.2s;
+  }
+
+  &__link {
+    @extend %link;
+    display: block;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $active-link;
+    transition: all linear 0.2s;
+  }
+
+  &__link:hover {
+    background-color: $color-secondary;
+  }
+
+  &__icon {
+    width: 26px;
+    height: 26px;
+    fill: $color-secondary;
+    transition: fill linear 0.2s;
+  }
+
+  &__link:hover &__icon {
+    fill: $color-white;
+  }
+}

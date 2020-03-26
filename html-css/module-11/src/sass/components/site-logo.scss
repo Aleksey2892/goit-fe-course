@@ -1,0 +1,22 @@
+.site-logo {
+  margin: 0;
+  font-family: $font-montserrat;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+
+  &__link {
+    @extend %link;
+    color: $color-white;
+    transition: color linear 0.2s;
+  }
+
+  &__link:hover {
+    color: $active-link;
+  }
+  
+  &__link:focus {
+    color: $active-link;
+    outline: 2px solid $active-link;
+  }
+}

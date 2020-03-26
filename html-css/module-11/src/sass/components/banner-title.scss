@@ -1,0 +1,56 @@
+.banner-title {
+  width: 840px;
+  text-align: center;
+  @include flex(flex, column, center);
+
+  &__subtitle {
+    font-family: $font-kaushan;
+    font-size: 72px;
+    line-height: 1;
+    margin-bottom: 50px;
+  }
+
+  &__welcome {
+    font-family: $font-montserrat;
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 125px;
+  }
+
+  &__link {
+    @extend %link;
+    display: block;
+    font-family: $font-montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    padding: 10px 30px 10px 30px;
+    transition: all linear 0.2s;
+    background-color: transparent;
+    text-transform: uppercase;
+    width: 165px;
+    color: $color-white;
+    border: 3px solid $color-white;
+  }
+
+  &__link:hover {
+    color: rgba(243, 129, 129, 0.7);
+    background-color: $color-white;
+    padding: 10px 100px 10px 100px;
+    border-radius: 20px;
+    box-shadow: $active-link 1px 1px 10px 10px;
+    width: 305px;
+  }
+
+  &__link:focus {
+    color: rgba(243, 129, 129, 0.7);
+    background-color: $color-white;
+    padding: 10px 100px 10px 100px;
+    border-radius: 20px;
+    box-shadow: $active-link 1px 1px 10px 10px;
+    width: 305px;
+    outline: 2px solid $color-secondary;
+  }
+}

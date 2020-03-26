@@ -1,0 +1,57 @@
+.menu-nav {
+  @extend %list;
+  display: flex;
+  justify-content: space-between;
+  font-family: $font-montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  width: 611px;
+  padding: 0;
+  margin: 0;
+
+  &__link {
+    @extend %link;
+    color: $color-white;
+    transition: color linear 0.2s;
+  }
+
+  &__link:hover {
+    color: $active-link;
+  }
+
+  &__link:focus {
+    color: $active-link;
+    outline: 2px solid $active-link;
+  }
+
+  &__link::after {
+    display: block;
+    content: '';
+    margin: 12px auto 0;
+    width: 0;
+    height: 3px;
+    transition: background-color, linear 0.2s;
+    transform: translateY(-10px);;
+  }
+
+  &__link:hover::after {
+    width: 100%;
+    transform: translateY(0);;
+    background-color: $active-link;
+  }
+
+  &__icon {
+    fill: $color-white;
+    transition: fill linear 0.2s;
+  }
+
+  &__icon:hover {
+    fill: $active-link;
+  }
+
+  &__link:focus &__icon {
+    fill: $active-link
+  }
+}

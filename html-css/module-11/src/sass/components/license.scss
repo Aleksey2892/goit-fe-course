@@ -1,0 +1,12 @@
+.license {
+  font-family: $font-montserrat;
+  color: $color-main;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+
+  &__link {
+    @extend %link;
+    color: $color-secondary;
+  }
+}

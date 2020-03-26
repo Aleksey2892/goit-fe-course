@@ -3,5 +3,27 @@
  */
 
 @import 'helpers/variables.scss';
+@import 'helpers/mixins.scss';
+@import 'helpers/placeholders.scss';
 @import 'normalize.scss';
 @import 'base.scss';
+
+// Components
+@import 'components/banner-img.scss';
+@import 'components/site-logo.scss';
+@import 'components/menu-nav.scss';
+@import 'components/banner-title.scss';
+@import 'components/page-main.scss';
+@import 'components/features-list.scss';
+@import 'components/team-cards.scss';
+@import 'components/page-footer.scss';
+@import 'components/license.scss';
+@import 'components/form-subscribe.scss';
+
+// @import 'components/'
+// @import 'components/'
+// @import 'components/'
+// @import 'components/'
+// @import 'components/'
+// @import 'components/'
+// @import 'components/'
