@@ -9,4 +9,13 @@
     @extend %link;
     color: $color-secondary;
   }
+
+  &__link:hover {
+    color: $active-link;
+  }
+
+  &__link:focus {
+    color: $active-link;
+    outline: 2px solid $active-link;
+  }
 }

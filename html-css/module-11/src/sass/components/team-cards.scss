@@ -52,6 +52,7 @@
     transition: all linear 0.2s;
   }
 
+  &:focus-within &__menu,
   &:hover::before,
   &:hover &__menu {
     opacity: 1;
@@ -81,8 +82,12 @@
     transition: all linear 0.2s;
   }
 
-  &__link:hover {
+  &__link:hover, &__link:focus-within {
     background-color: $color-secondary;
+  }
+
+  &__link:focus-within {
+    outline: 2px solid $active-link;
   }
 
   &__icon {
@@ -92,7 +97,7 @@
     transition: fill linear 0.2s;
   }
 
-  &__link:hover &__icon {
+  &__link:hover &__icon, &__link:focus-within &__icon {
     fill: $color-white;
   }
 }
