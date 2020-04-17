@@ -17,7 +17,9 @@ if (Number.isNaN(numberGoods) !== true) {
   console.log('Введите число');
 }
 
-if (totalPrice >= credits) {
+if (totalPrice < 0) {
+  console.log('Число не может быть отрицательным');
+} else if (totalPrice >= credits) {
   console.log('Недостаточно средств на счету!');
 } else if (totalPrice < credits && totalPrice !== 0) {
   credits = credits - totalPrice;
