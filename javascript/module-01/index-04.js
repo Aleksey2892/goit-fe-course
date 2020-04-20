@@ -7,23 +7,19 @@ numberGoods = prompt('Сколько дроидов вы хотите купит
 
 if (numberGoods === null || numberGoods === '0') {
   console.log('Отменено пользователем!');
-}
-
-numberGoods = Number(numberGoods);
-
-if (Number.isNaN(numberGoods) !== true) {
-  totalPrice = numberGoods * pricePerDroid;
 } else {
-  console.log('Введите число');
+  totalPrice = numberGoods * pricePerDroid;
 }
 
-if (totalPrice < 0) {
-  console.log('Число не может быть отрицательным');
-} else if (totalPrice >= credits) {
+if (totalPrice >= credits) {
   console.log('Недостаточно средств на счету!');
-} else if (totalPrice < credits && totalPrice !== 0) {
+} else if (numberGoods < 0) {
+  console.log('Число не может быть отрицательным!');
+}
+
+if (numberGoods > 0 && totalPrice < credits) {
   credits = credits - totalPrice;
   console.log(
-    `Вы купили ${numberGoods} дроид(ов) на сумму ${totalPrice} кредитов, на счету осталось ${credits} кредитов.`,
+    `Вы купили ${numberGoods} дроид(ов), на счету осталось ${credits} кредитов.`,
   );
 }
