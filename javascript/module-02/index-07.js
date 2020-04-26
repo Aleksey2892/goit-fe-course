@@ -22,7 +22,7 @@ const isLoginUnique = (allLogins, login) => {
   return loginUnique;
 };
 
-const addLogin = function (allLogins, login) {
+const addLogin = function(allLogins, login) {
   if (isLoginValid(login) === false) {
     return `Ошибка! Длина вашего логина: '${loginLength}' символ(ов). Логин должен быть от 4 до 16 символов.`;
   }
