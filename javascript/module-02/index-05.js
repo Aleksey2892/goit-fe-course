@@ -1,5 +1,5 @@
 const checkForSpam = message => {
-  let string = message.toLowerCase();
+  const string = message.toLowerCase();
   let checkWord = false;
 
   if (string.includes('spam') || string.includes('sale') === true) {
