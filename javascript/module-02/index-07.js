@@ -31,10 +31,7 @@ const addLogin = function(allLogins, login) {
     return 'Такой логин уже используется!';
   }
 
-  if (
-    isLoginValid(login) === true &&
-    isLoginUnique(allLogins, login) === true
-  ) {
+  if (isLoginValid(login) && isLoginUnique(allLogins, login)) {
     allLogins.push(login);
   }
 
