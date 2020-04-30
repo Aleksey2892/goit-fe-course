@@ -1,24 +1,25 @@
 const formatString = string => {
-  let format = string.split('');
+  let format = string;
 
-  if (format.length < 40) {
+  if (format.length > 40) {
+    format = string.split('');
+    format.length = 40;
     format = format.join('');
-    return format;
+
+    return `${format}...(trimmed).`;
   }
 
-  format.length = 40;
-  format = format.join('');
-  return `${format}...(trimmed).`;
+  return format;
 };
 
 console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
 // вернется оригинальная строка
 
 console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
-// // вернется форматированная строка
+// // // вернется форматированная строка
 
 console.log(formatString('Curabitur ligula sapien.'));
-// // вернется оригинальная строка
+// // // вернется оригинальная строка
 
 console.log(
   formatString(
