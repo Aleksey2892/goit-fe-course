@@ -11,16 +11,14 @@ while (true) {
 
   input = Number(input);
 
-  if (Number.isNaN(input) === true) {
+  if (Number.isNaN(input)) {
     alert('Было введено не число, попробуйте еще раз');
-    continue;
-  } else if (input === 0) {
     continue;
   }
 
   numbers.push(input);
 }
-if (numbers.length === 0) {
+if (!numbers.length) {
   console.log('Отменено пользователем!');
 } else {
   for (let number of numbers) {
