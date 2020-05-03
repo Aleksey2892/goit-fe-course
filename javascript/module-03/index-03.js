@@ -9,7 +9,7 @@ const findBestEmployee = function(employees) {
     }
   }
 
-  return bestEmployee;
+  return `Самый продуктивный: ${bestEmployee}`;
 };
 
 console.log(
