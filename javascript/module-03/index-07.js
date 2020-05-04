@@ -1,7 +1,3 @@
-/*
- * Типов транзацкий всего два.
- * Можно положить либо снять деньги со счета.
- */
 const Transaction = {
   DEPOSIT: 'deposit',
   WITHDRAW: 'withdraw',
@@ -14,11 +10,6 @@ const account = {
 
   transactions: [],
 
-  counterId() {
-    counter += 1;
-    return counter;
-  },
-
   createTransaction(amount, type) {
     const result = { sum: amount, act: type, id: this.counterId() };
     this.transactions.push(result);
@@ -27,20 +18,22 @@ const account = {
   deposit(amount) {
     this.balance += amount;
     this.createTransaction(amount, Transaction.DEPOSIT);
-    return `Операция [+${amount}] прошла успешно.`;
+
+    return `Операция [+${amount}] прошла успешно. id транзакции: '${counter}'`;
   },
 
   withdraw(amount) {
     if (amount > this.balance) {
       return `Снятие суммы [${amount}] не возможно :( Доступный баланс: ${this.balance}.`;
     }
-    this.createTransaction(amount, Transaction.WITHDRAW);
     this.balance -= amount;
-    return `Операция [-${amount}] прошла успешно.`;
+    this.createTransaction(amount, Transaction.WITHDRAW);
+
+    return `Операция [-${amount}] прошла успешно. id транзакции: '${counter}'`;
   },
 
   getBalance() {
-    return `Баланс: ${this.balance}`;
+    return `Баланс: [${this.balance}]`;
   },
 
   getTransactionDetails(id) {
@@ -49,6 +42,7 @@ const account = {
         return val;
       }
     }
+
     return `Не нашли такой id: '${id}' :(`;
   },
 
@@ -59,24 +53,28 @@ const account = {
         result += value.sum;
       }
     }
-    return `Общая сумма [${type}] транзакций: ${result}`;
+
+    return `Общая сумма '${type}' транзакций: [${result}]`;
+  },
+
+  // Счетчик id
+  counterId() {
+    counter += 1;
+    return counter;
   },
 };
 
 console.log(account.deposit(110));
-console.log(account.deposit(120));
-console.log(account.deposit(130));
 console.log(account.withdraw(50));
+console.log(account.deposit(120));
 console.log(account.withdraw(90));
-
-// console.table(account);
+console.log(account.deposit(130));
 
 console.table(account.transactions);
 
 console.log(account.getTransactionTotal('withdraw'));
 console.log(account.getTransactionTotal('deposit'));
+
 console.log(account.getBalance());
 
-// console.log(account.counterId());
-
-console.log(account.getTransactionDetails(5));
+console.log(account.getTransactionDetails(2));
