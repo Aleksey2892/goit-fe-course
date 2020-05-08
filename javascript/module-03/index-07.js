@@ -12,12 +12,13 @@ const account = {
 
   createTransaction(amount, type) {
     const result = { sum: amount, act: type, id: this.counterId() };
-    this.transactions.push(result);
+
+    return result;
   },
 
   deposit(amount) {
     this.balance += amount;
-    this.createTransaction(amount, Transaction.DEPOSIT);
+    this.transactions.push(this.createTransaction(amount, Transaction.DEPOSIT));
 
     return `Операция [+${amount}] прошла успешно. id транзакции: '${counter}'`;
   },
@@ -27,7 +28,9 @@ const account = {
       return `Снятие суммы [${amount}] не возможно :( Доступный баланс: ${this.balance}.`;
     }
     this.balance -= amount;
-    this.createTransaction(amount, Transaction.WITHDRAW);
+    this.transactions.push(
+      this.createTransaction(amount, Transaction.WITHDRAW),
+    );
 
     return `Операция [-${amount}] прошла успешно. id транзакции: '${counter}'`;
   },
@@ -60,6 +63,7 @@ const account = {
   // Счетчик id
   counterId() {
     counter += 1;
+
     return counter;
   },
 };
