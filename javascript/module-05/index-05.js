@@ -23,14 +23,22 @@ class Car {
   }
 
   accelerate(value) {
-    if (this.speed + value <= 200) {
-      this.speed += value;
+    if (this.isOn && value > 0) {
+      if (this.speed + value <= this.maxSpeed) {
+        this.speed += value;
+      } else {
+        this.speed = this.maxSpeed;
+      }
     }
   }
 
   decelerate(value) {
-    if (this.speed - value >= 0) {
-      this.speed -= value;
+    if (value > 0) {
+      if (this.speed - value >= 0) {
+        this.speed -= value;
+      } else {
+        this.speed = 0;
+      }
     }
   }
 
@@ -56,8 +64,8 @@ mustang.drive(2);
 Car.getSpecs(mustang);
 // // maxSpeed: 200, speed: 50, isOn: true, distance: 100, price: 2000
 
-mustang.decelerate(10);
-mustang.drive(2);
+mustang.decelerate(20);
+mustang.drive(1);
 mustang.turnOff();
 
 Car.getSpecs(mustang);
