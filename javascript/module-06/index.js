@@ -75,9 +75,16 @@ console.log(getNamesSortedByFriendsCount(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
 
 // 10 =====================================================
-// const getSortedUniqueSkills = users => {
-//   return users.reduce((allSkills, user) => allSkills + user.skills, []);
-// };
+const getSortedUniqueSkills = users => {
+  return Array.from(
+    new Set(
+      users.reduce(function(allSkills, user) {
+        allSkills.push(...user.skills);
+        return allSkills;
+      }, []),
+    ),
+  ).sort();
+};
 
-// console.log(getSortedUniqueSkills(users));
-// // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+console.log(getSortedUniqueSkills(users));
+// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
