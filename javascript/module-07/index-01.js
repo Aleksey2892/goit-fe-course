@@ -1,17 +1,20 @@
-const getCategoriesInfo = () => {
-  const categoriesRef = document.querySelector('#categories');
-  const itemsRef = document.querySelectorAll('.item');
+const categoriesDomRef = document.querySelector('#categories');
+const itemsDomRef = document.querySelectorAll('.item');
 
-  const catgQuantity = categoriesRef.children.length;
-  console.log(`В списке ${catgQuantity} категории.`);
+const getNumOfCategories = htmlCatgRef => {
+  const htmlRef = htmlCatgRef.children.length;
+  console.log(`В списке ${htmlRef} категории.`);
+};
 
-  itemsRef.forEach(item => {
+const getCatgInfo = htmlRef => {
+  htmlRef.forEach(item => {
     const categoryName = item.firstElementChild.textContent;
-    const elemQuantity = item.children[1].querySelectorAll('li').length;
+    const numOfElem = item.children[1].querySelectorAll('li').length;
 
     console.log(`Категория: ${categoryName}`);
-    console.log(`Количество элементов: ${elemQuantity}`);
+    console.log(`Количество элементов: ${numOfElem}`);
   });
 };
 
-getCategoriesInfo();
+getNumOfCategories(categoriesDomRef);
+getCatgInfo(itemsDomRef);
