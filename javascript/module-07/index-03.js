@@ -15,3 +15,31 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryDomRef = document.querySelector('#gallery');
+
+const createLiRef = () => {
+  const listRef = document.createElement('li');
+  listRef.className = 'js-gallery-list';
+  return listRef;
+};
+
+const createImgList = (url, alt) => {
+  const li = createLiRef();
+  li.insertAdjacentHTML(
+    'afterbegin',
+    `<img src='${url}' alt='${alt}' class='js-gallery-img' width='300'>`,
+  );
+
+  return li;
+};
+
+const addImgToList = items => {
+  return items.map(item => createImgList(item.url, item.alt));
+};
+
+const addListToDomRef = (domRef, img) => {
+  domRef.append(...addImgToList(img));
+};
+
+addListToDomRef(galleryDomRef, images);
