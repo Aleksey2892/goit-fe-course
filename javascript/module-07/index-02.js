@@ -1,3 +1,4 @@
+// data
 const ingredients = [
   'Картошка',
   'Грибы',
@@ -7,8 +8,10 @@ const ingredients = [
   'Приправы',
 ];
 
+// refs
 const ingredientsDomRef = document.querySelector('.js-ingredients');
 
+// fn
 const createItem = text => {
   const createLi = document.createElement('li');
   createLi.textContent = text;
@@ -21,4 +24,5 @@ const addListToDom = (domRef, items) => {
   domRef.append(...addList(items));
 };
 
+// call fn
 addListToDom(ingredientsDomRef, ingredients);

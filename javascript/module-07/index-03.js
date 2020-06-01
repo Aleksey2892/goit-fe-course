@@ -1,3 +1,4 @@
+// data
 const images = [
   {
     url:
@@ -16,6 +17,7 @@ const images = [
   },
 ];
 
+// fn
 const galleryDomRef = document.querySelector('#gallery');
 
 const createLiRef = () => {
@@ -42,4 +44,5 @@ const addListToDomRef = (domRef, img) => {
   domRef.append(...addImgToList(img));
 };
 
+// call fn
 addListToDomRef(galleryDomRef, images);
