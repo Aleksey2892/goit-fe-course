@@ -10,7 +10,7 @@ function onInputText() {
   const textDefault = 'незнакомец';
   if (nameOutputRef.textContent === textDefault) nameOutputRef.textContent = '';
 
-  nameOutputRef.textContent = event.target.value;
+  nameOutputRef.textContent = event.target.value; // eslint-disable-line
 
   if (!inputRef.value) nameOutputRef.textContent = textDefault;
 }

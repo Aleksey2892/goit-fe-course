@@ -1,13 +1,12 @@
 // refs
 const inputTextRef = document.querySelector('#validation-input');
 const validDataLength = Number(inputTextRef.getAttribute('data-length'));
-// console.log(inputTextRef);
 
 // event
-inputTextRef.addEventListener('blur', fn);
+inputTextRef.addEventListener('blur', inputTextHandler); // eslint-disable-line
 
 // fn
-function fn() {
+function inputTextHandler() {
   if (event.target.value.length < validDataLength) {
     inputTextRef.classList.add('invalid');
     if (inputTextRef.classList.contains('valid')) {
