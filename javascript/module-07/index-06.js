@@ -18,6 +18,7 @@ function inputTextHandler() {
       inputTextRef.classList.remove('invalid');
     }
   }
+
   if (!event.target.value.length) {
     inputTextRef.classList.remove('valid', 'invalid');
   }

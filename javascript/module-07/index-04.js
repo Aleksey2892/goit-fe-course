@@ -3,9 +3,10 @@ const btnDecrementRef = document.querySelector('[data-action="decrement"]');
 const btnIncrementRef = document.querySelector('[data-action="increment"]');
 const counterValueRef = document.querySelector('#value');
 
-// event
+// events
 btnDecrementRef.addEventListener('click', decrementValue); // eslint-disable-line
 btnIncrementRef.addEventListener('click', incrementValue); // eslint-disable-line
+// events setting
 let counterValue = 0;
 
 // fn

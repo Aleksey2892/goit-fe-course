@@ -8,7 +8,6 @@ const boxesOutputRef = document.querySelector('#boxes');
 //
 // events
 btnCreateRef.addEventListener('click', () => {
-  console.log('inputHandler');
   const amount = inputAmountRef.value;
   createBoxes(amount); // eslint-disable-line
 });
@@ -25,7 +24,6 @@ function createBoxes(amount) {
   let divHeight = 30;
   //
   for (let i = 0; i < amount; i += 1) {
-    console.log('createBoxes:');
     // create element
     const div = document.createElement('div');
     // makes color

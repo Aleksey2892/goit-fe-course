@@ -15,6 +15,4 @@ function inputSizeHandler() {
   const sizeValue = event.target.value; // eslint-disable-line
 
   textRef.style.fontSize = `${sizeValue}px`;
-
-  console.log(event.target.value); // eslint-disable-line
 }
