@@ -18,7 +18,7 @@ if (totalPrice >= credits) {
 }
 
 if (numberGoods > 0 && totalPrice < credits) {
-  credits = credits - totalPrice;
+  credits -= totalPrice;
   console.log(
     `Вы купили ${numberGoods} дроид(ов), на счету осталось ${credits} кредитов.`,
   );
