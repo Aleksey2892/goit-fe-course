@@ -75,16 +75,11 @@ function modalHandler(event) {
   if (evKey === left || evKey === right) modalSwitchImg(evKey); //eslint-disable-line
 
   // CLOSE MODAL
-  const evAction = event.target.dataset.action;
-  const evOverlay = event.target.classList.value;
-  const evEsc = event.key;
+  const evAction = event.target.dataset.action === 'close-lightbox';
+  const evOverlay = event.target.classList.value === 'lightbox__content';
+  const evEsc = event.key === 'Escape';
 
-  if (
-    evAction === 'close-lightbox' ||
-    evOverlay === 'lightbox__content' ||
-    evEsc === 'Escape'
-  )
-    modalClose(); //eslint-disable-line
+  if (evAction || evOverlay || evEsc) modalClose(); //eslint-disable-line
 }
 
 function modalSwitchImg(evArrowKey) {
