@@ -5,10 +5,7 @@ import gallery from './gallery-items.js'; //eslint-disable-line
 const refs = {
   ulGallery: document.querySelector('.js-gallery'),
   modalBox: document.querySelector('.js-lightbox'),
-  modalOverlay: document.querySelector('.lightbox__overlay'),
   modalImage: document.querySelector('.lightbox__image'),
-  modalClose: document.querySelector('.lightbox__button'),
-  modalContent: document.querySelector('.lightbox__content'),
 };
 
 // FNS CREATE AND RENDER
@@ -93,21 +90,6 @@ function modalHandler(event) {
 }
 
 function modalSwitchImg(evArrowKey) {
-  // let index;
-  // const getIndex = gallery.forEach((item, idx) => {
-  //   if (item.original === refs.modalImage.src) {
-  //     index = idx;
-  //   }
-  // });
-  // console.log(gallery[index].original);
-  // if (event === 'ArrowRight') {
-  //   refs.modalImage.src = gallery[index + 1].original;
-  // }
-  // if (event === 'ArrowLeft') {
-  //   if (gallery.length > 0) {
-  //     refs.modalImage.src = gallery[index - 1].original;
-  //   }
-  // }
   let imgIdx = Number(refs.modalImage.dataset.idx);
 
   evArrowKey === 'ArrowRight' ? next() : prev(); //eslint-disable-line
@@ -115,10 +97,10 @@ function modalSwitchImg(evArrowKey) {
   refs.modalImage.src = gallery[imgIdx].original;
   refs.modalImage.dataset.idx = imgIdx;
 
+  // SWITCHING
   function next() {
     imgIdx < gallery.length - 1 ? (imgIdx += 1) : (imgIdx = 0); //eslint-disable-line
   }
-
   function prev() {
     imgIdx > 0 ? (imgIdx -= 1) : (imgIdx = gallery.length - 1); //eslint-disable-line
   }
