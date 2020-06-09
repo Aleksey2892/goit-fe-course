@@ -1,55 +1,135 @@
-// js gallery array import
+// JS GALLERY ARRAY IMPORT
 import gallery from './gallery-items.js'; //eslint-disable-line
 
-// refs obj
+// REFS OBJS
 const refs = {
   ulGallery: document.querySelector('.js-gallery'),
   modalBox: document.querySelector('.js-lightbox'),
+  modalOverlay: document.querySelector('.lightbox__overlay'),
   modalImage: document.querySelector('.lightbox__image'),
+  modalClose: document.querySelector('.lightbox__button'),
+  modalContent: document.querySelector('.lightbox__content'),
 };
 
-// fns create and render gallery
+// FNS CREATE AND RENDER
 (function() {
-  refs.ulGallery.append(...createGalleryArray(gallery)); //eslint-disable-line
+  refs.ulGallery.append(...createGalleryArr(gallery)); //eslint-disable-line
 })();
 
-function createGalleryArray(imgArray) {
+function createGalleryArr(imgArray) {
   return imgArray.map(
-    obj => templateLiItem(obj.original, obj.preview, obj.description), //eslint-disable-line
+    (obj, idx) => createItems(obj.original, obj.preview, obj.description, idx), //eslint-disable-line
   );
 }
 
-function templateLiItem(href, src, alt) {
-  const li = document.createElement('li');
-  li.classList.add('gallery__item');
+function createItems(orig, preview, descr, idx) {
+  const item = document.createElement('li');
+  item.classList.add('gallery__item');
 
-  li.insertAdjacentHTML(
+  item.insertAdjacentHTML(
     'beforeend',
-    `<a class="gallery__link" href="${href}"><img class="gallery__image" src="${src}" data-source="${href}" alt="${alt}"/></a>`,
+    `<a class="gallery__link" href="${orig}">
+
+    <img class="gallery__image" 
+    src="${preview}" 
+    data-source="${orig}" 
+    data-idx="${idx}" 
+    alt="${descr}"/>
+    
+    </a>`,
   );
 
-  return li;
+  return item;
 }
 
 //
 
-// event listener
-refs.ulGallery.addEventListener('click', onGalleryClick);
+// EVENT LISTENER
+refs.ulGallery.addEventListener('click', onGalleryClick); //eslint-disable-line
 
-// event fn
+// EVENT FNS
 function onGalleryClick(event) {
   if (event.target.nodeName !== 'IMG') return;
 
   event.preventDefault();
 
-  const targetSource = event.target.dataset.source;
-  const targetAlt = event.target.alt;
+  const evSource = event.target.dataset.source;
+  const evAlt = event.target.alt;
+  const evIdx = event.target.dataset.idx;
 
-  openModal(targetSource, targetAlt); //eslint-disable-line
+  modalOpen(evSource, evAlt, evIdx); //eslint-disable-line
 }
 
-function openModal(src, alt) {
+function modalOpen(src, alt, idx) {
   refs.modalImage.src = src;
   refs.modalImage.alt = alt;
+  refs.modalImage.dataset.idx = idx;
   refs.modalBox.classList.add('is-open');
+
+  // ADD EVENT LISTENERS
+  refs.modalBox.addEventListener('click', modalHandler); //eslint-disable-line
+  window.addEventListener('keydown', modalHandler); //eslint-disable-line
+}
+
+function modalHandler(event) {
+  // SWITCHING IMG
+  const evKey = event.code;
+  const left = 'ArrowLeft';
+  const right = 'ArrowRight';
+
+  if (evKey === left || evKey === right) modalSwitchImg(evKey); //eslint-disable-line
+
+  // CLOSE MODAL
+  const evAction = event.target.dataset.action;
+  const evOverlay = event.target.classList.value;
+  const evEsc = event.key;
+
+  if (
+    evAction === 'close-lightbox' ||
+    evOverlay === 'lightbox__content' ||
+    evEsc === 'Escape'
+  )
+    modalClose(); //eslint-disable-line
+}
+
+function modalSwitchImg(evArrowKey) {
+  // let index;
+  // const getIndex = gallery.forEach((item, idx) => {
+  //   if (item.original === refs.modalImage.src) {
+  //     index = idx;
+  //   }
+  // });
+  // console.log(gallery[index].original);
+  // if (event === 'ArrowRight') {
+  //   refs.modalImage.src = gallery[index + 1].original;
+  // }
+  // if (event === 'ArrowLeft') {
+  //   if (gallery.length > 0) {
+  //     refs.modalImage.src = gallery[index - 1].original;
+  //   }
+  // }
+  let imgIdx = Number(refs.modalImage.dataset.idx);
+
+  evArrowKey === 'ArrowRight' ? next() : prev(); //eslint-disable-line
+
+  refs.modalImage.src = gallery[imgIdx].original;
+  refs.modalImage.dataset.idx = imgIdx;
+
+  function next() {
+    imgIdx < gallery.length - 1 ? (imgIdx += 1) : (imgIdx = 0); //eslint-disable-line
+  }
+
+  function prev() {
+    imgIdx > 0 ? (imgIdx -= 1) : (imgIdx = gallery.length - 1); //eslint-disable-line
+  }
+}
+
+function modalClose() {
+  refs.modalBox.classList.remove('is-open');
+  refs.modalImage.src = '';
+  refs.modalImage.alt = '';
+
+  // CLOSE LISTENERS
+  refs.modalBox.removeEventListener('click', modalHandler);
+  window.removeEventListener('keydown', modalHandler);
 }
