@@ -41,11 +41,8 @@ function createItems(orig, preview, descr, idx) {
 
 //
 
-// EVENT LISTENER
-refs.ulGallery.addEventListener('click', onGalleryClick); //eslint-disable-line
-
-// EVENT FNS
-function onGalleryClick(event) {
+// GALLERY LISTENER
+refs.ulGallery.addEventListener('click', event => {
   if (event.target.nodeName !== 'IMG') return;
 
   event.preventDefault();
@@ -55,8 +52,9 @@ function onGalleryClick(event) {
   const evIdx = event.target.dataset.idx;
 
   modalOpen(evSource, evAlt, evIdx); //eslint-disable-line
-}
+});
 
+// EVENT FNS
 function modalOpen(src, alt, idx) {
   refs.modalImage.src = src;
   refs.modalImage.alt = alt;
@@ -92,16 +90,16 @@ function modalHandler(event) {
 function modalSwitchImg(evArrowKey) {
   let imgIdx = Number(refs.modalImage.dataset.idx);
 
-  evArrowKey === 'ArrowRight' ? next() : prev(); //eslint-disable-line
+  evArrowKey === 'ArrowRight' ? nextImg() : prevImg(); //eslint-disable-line
 
   refs.modalImage.src = gallery[imgIdx].original;
   refs.modalImage.dataset.idx = imgIdx;
 
   // SWITCHING
-  function next() {
+  function nextImg() {
     imgIdx < gallery.length - 1 ? (imgIdx += 1) : (imgIdx = 0); //eslint-disable-line
   }
-  function prev() {
+  function prevImg() {
     imgIdx > 0 ? (imgIdx -= 1) : (imgIdx = gallery.length - 1); //eslint-disable-line
   }
 }
