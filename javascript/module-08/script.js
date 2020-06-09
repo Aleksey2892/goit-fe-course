@@ -68,26 +68,27 @@ function modalOpen(src, alt, idx) {
 
 function modalHandler(event) {
   // SWITCHING IMG
-  const evKey = event.code;
   const left = 'ArrowLeft';
   const right = 'ArrowRight';
+  const keyArrow = event.code === left || event.code === right;
 
-  if (evKey === left || evKey === right) modalSwitchImg(evKey); //eslint-disable-line
+  if (keyArrow) modalSwitchImg(keyArrow); //eslint-disable-line
 
   // CLOSE MODAL
-  const evAction = event.target.dataset.action === 'close-lightbox';
-  const evOverlay = event.target.classList.value === 'lightbox__content';
-  const evEsc = event.key === 'Escape';
+  const clickAction = event.target.dataset.action === 'close-lightbox';
+  const clickOverlay = event.target.classList.value === 'lightbox__content';
+  const keyEsc = event.key === 'Escape';
 
-  if (evAction || evOverlay || evEsc) modalClose(); //eslint-disable-line
+  if (clickAction || clickOverlay || keyEsc) modalClose(); //eslint-disable-line
 }
 
-function modalSwitchImg(evArrowKey) {
+function modalSwitchImg(keyArrow) {
   let imgIdx = Number(refs.modalImage.dataset.idx);
+  const setImg = gallery[imgIdx].original;
 
-  evArrowKey === 'ArrowRight' ? nextImg() : prevImg(); //eslint-disable-line
+  keyArrow === 'ArrowRight' ? nextImg() : prevImg(); //eslint-disable-line
 
-  refs.modalImage.src = gallery[imgIdx].original;
+  refs.modalImage.src = setImg;
   refs.modalImage.dataset.idx = imgIdx;
 
   // SWITCHING
