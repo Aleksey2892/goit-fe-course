@@ -15,30 +15,33 @@ const refs = {
 
 function createGalleryArr(imgArray) {
   return imgArray.map(
-    (obj, idx) => createItems(obj.original, obj.preview, obj.description, idx), //eslint-disable-line
+    (obj, idx) => createLi(obj.original, obj.preview, obj.description, idx), //eslint-disable-line
   );
 }
 
-function createItems(orig, preview, descr, idx) {
+function createLi(orig, preview, descr, idx) {
   const item = document.createElement('li');
   item.classList.add('gallery__item');
 
-  item.insertAdjacentHTML(
-    'beforeend',
-    `<a class="gallery__link" href="${orig}">
-
-    <img class="gallery__image" 
-    src="${preview}" 
-    data-source="${orig}" 
-    data-idx="${idx}" 
-    alt="${descr}"/>
-    
-    </a>`,
-  );
+  insertImg(item, orig, preview, descr, idx); //eslint-disable-line
 
   return item;
 }
 
+function insertImg(item, orig, preview, descr, idx) {
+  item.insertAdjacentHTML(
+    'beforeend',
+    `<a class="gallery__link" href="${orig}">
+
+  <img class="gallery__image" 
+  src="${preview}" 
+  data-source="${orig}" 
+  data-idx="${idx}" 
+  alt="${descr}"/>
+  
+  </a>`,
+  );
+}
 //
 
 // GALLERY LISTENER
@@ -63,17 +66,10 @@ function modalOpen(src, alt, idx) {
 
   // ADD EVENT LISTENERS
   refs.modalBox.addEventListener('click', modalHandler); //eslint-disable-line
-  window.addEventListener('keydown', modalHandler); //eslint-disable-line
+  window.addEventListener('keydown', modalSwitchImg); //eslint-disable-line
 }
 
 function modalHandler(event) {
-  // SWITCHING IMG
-  const left = 'ArrowLeft';
-  const right = 'ArrowRight';
-  const keyArrow = event.code === left || event.code === right;
-
-  if (keyArrow) modalSwitchImg(keyArrow); //eslint-disable-line
-
   // CLOSE MODAL
   const clickAction = event.target.dataset.action === 'close-lightbox';
   const clickOverlay = event.target.classList.value === 'lightbox__content';
@@ -82,11 +78,16 @@ function modalHandler(event) {
   if (clickAction || clickOverlay || keyEsc) modalClose(); //eslint-disable-line
 }
 
-function modalSwitchImg(keyArrow) {
+function modalSwitchImg(event) {
+  // SWITCHING IMG
+  const left = 'ArrowLeft';
+  const right = 'ArrowRight';
+  const keyArrow = event.code === left || event.code === right;
+
   let imgIdx = Number(refs.modalImage.dataset.idx);
-  const setImg = gallery[imgIdx].original;
 
   keyArrow === 'ArrowRight' ? nextImg() : prevImg(); //eslint-disable-line
+  const setImg = gallery[imgIdx].original;
 
   refs.modalImage.src = setImg;
   refs.modalImage.dataset.idx = imgIdx;
