@@ -1,3 +1,4 @@
 import './styles.css';
-// import './js/localstorage';
-import './js/test';
+import './js/templateMenu';
+import './js/themeSwitch';
+import './js/localStorage';
