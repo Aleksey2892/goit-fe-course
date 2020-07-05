@@ -1,9 +1,9 @@
-const Theme = {
+export const Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme',
 };
 
-const refs = {
+export const refs = {
   switchRef: document.querySelector('.js-switch-input'),
   bodyRef: document.querySelector('body'),
 };
@@ -16,7 +16,7 @@ const themeSwitchHandler = () => {
 
 refs.switchRef.addEventListener('change', themeSwitchHandler);
 
-function darkOn() {
+export function darkOn() {
   const themeLightActive = refs.bodyRef.classList.contains(Theme.LIGHT);
   const replace = () => refs.bodyRef.classList.replace(Theme.LIGHT, Theme.DARK);
   const add = () => refs.bodyRef.classList.add(Theme.DARK);
@@ -33,5 +33,3 @@ function darkOff() {
   themeDarkActive ? replace() : add(); //eslint-disable-line
   localStorage.clear();
 }
-
-export default { Theme, refs, darkOn, darkOff };

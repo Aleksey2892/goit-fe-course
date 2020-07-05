@@ -1,13 +1,13 @@
-import themeSwitch from './themeSwitch';
+import { Theme, refs, darkOn } from './themeSwitch';
+
+const applyTheme = () => {
+  localStorage.clear();
+  refs.switchRef.checked = true;
+  darkOn();
+};
 
 try {
-  const preloadTheme = localStorage.getItem('theme') === themeSwitch.Theme.DARK;
-  const applyTheme = () => {
-    localStorage.clear();
-    themeSwitch.refs.switchRef.checked = true;
-    themeSwitch.darkOn();
-  };
-
+  const preloadTheme = localStorage.getItem('theme') === Theme.DARK;
   if (preloadTheme) applyTheme();
 } catch (err) {
   console.error('Set state error: ', err);
